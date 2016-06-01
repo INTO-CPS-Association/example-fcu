@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DocumentPublisher.Template" version="4">
+  <OBJECT>
+    <ID name="DocumentPublisher.Template" mc="Standard.Stereotype" uid="01ec14e4-0000-1459-0000-000000000000"/>
+    <PID name="TemplateEditor" mc="Standard.Profile" uid="01ec14e4-0000-1456-0000-000000000000"/>
+    <ATTRIBUTES>
+      <ATT name="Image"><![CDATA[res/bmp/codetemplate.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/bmp/codetemplate.png]]></ATT>
+      <ATT name="IsHidden">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%stereotype.DocumentPublisher.Template.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Artifact]]></ATT>
+      <ATT name="Name"><![CDATA[DocumentPublisher.Template]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedExternDocumentType">
+        <OBJECT>
+          <ID name="Macros" mc="Standard.ExternDocumentType" uid="b128fd3e-6b3f-463d-b4d6-33e8527e6309"/>
+          <ATTRIBUTES>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[%externdocumenttype.Macros.label]]></ATT>
+            <ATT name="Icon"></ATT>
+            <ATT name="Image"></ATT>
+            <ATT name="Name"><![CDATA[Macros]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="OdtStylesheet" mc="Standard.ExternDocumentType" uid="700e74c8-e6d1-410f-960e-d8d1715b08ed"/>
+          <ATTRIBUTES>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[%externdocumenttype.OdtStylesheet.label]]></ATT>
+            <ATT name="Icon"></ATT>
+            <ATT name="Image"></ATT>
+            <ATT name="Name"><![CDATA[OdtStylesheet]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="HtmlStylesheet" mc="Standard.ExternDocumentType" uid="eac188f6-7f63-4251-9465-b117732b4398"/>
+          <ATTRIBUTES>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[%externdocumenttype.HtmlStylesheet.label]]></ATT>
+            <ATT name="Icon"></ATT>
+            <ATT name="Image"></ATT>
+            <ATT name="Name"><![CDATA[HtmlStylesheet]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="OxmlStylesheet" mc="Standard.ExternDocumentType" uid="3247e474-6de8-4ab8-833e-b6552c0d4a3b"/>
+          <ATTRIBUTES>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[%externdocumenttype.OxmlStylesheet.label]]></ATT>
+            <ATT name="Icon"></ATT>
+            <ATT name="Image"></ATT>
+            <ATT name="Name"><![CDATA[OxmlStylesheet]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="HtmlStructure" mc="Standard.ExternDocumentType" uid="0e293959-1e1f-4883-92a4-52e3c78e20fc"/>
+          <ATTRIBUTES>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[%externdocumenttype.HtmlStructure.label]]></ATT>
+            <ATT name="Icon"></ATT>
+            <ATT name="Image"></ATT>
+            <ATT name="Name"><![CDATA[HtmlStructure]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="DefinedTagType">
+        <OBJECT>
+          <ID name="TemplateVersion" mc="Standard.TagType" uid="6d8145ca-7ad9-11e0-9ffa-002564c97630"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.TemplateVersion.label]]></ATT>
+            <ATT name="Name"><![CDATA[TemplateVersion]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="HtmlCompatible" mc="Standard.TagType" uid="d80fc688-3c9e-4b4d-92cf-dd1f706235f9"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.HtmlCompatible.label]]></ATT>
+            <ATT name="Name"><![CDATA[HtmlCompatible]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="OdtCompatible" mc="Standard.TagType" uid="bbebff2c-cf94-477a-b114-51d06e8a924e"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.OdtCompatible.label]]></ATT>
+            <ATT name="Name"><![CDATA[OdtCompatible]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="OxmlCompatible" mc="Standard.TagType" uid="d3316317-bd3a-4716-916b-2b2b566b96d4"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%tagtype.OxmlCompatible.label]]></ATT>
+            <ATT name="Name"><![CDATA[OxmlCompatible]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="DefinedNoteType">
+        <OBJECT>
+          <ID name="TemplateContent" mc="Standard.NoteType" uid="01ec14e4-0000-1461-0000-000000000000"/>
+          <ATTRIBUTES>
+            <ATT name="IsHidden">true</ATT>
+            <ATT name="LabelKey"><![CDATA[%notetype.TemplateContent.label]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"><![CDATA[TemplateContent]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

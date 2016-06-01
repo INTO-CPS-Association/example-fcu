@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="fcu" version="4">
+  <OBJECT>
+    <ID name="fcu" mc="Standard.Package" uid="7b420902-07a7-4ec6-9599-d5d719c39c40"/>
+    <PID name="FCU" mc="Standard.Project" uid="1b3dde40-4969-4926-9074-b33537e157e6"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[fcu]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="FCU_mm" mc="Standard.Package" uid="2a55b804-5177-4835-8077-c326146e3ee6"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="Root" mc="Standard.Stereotype" uid="790408bd-a3b9-465b-aa18-dc5690cae3ea"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Standard.TaggedValue" uid="dae51bcc-ce02-4e9e-84c9-d18b5545ef23"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Actual">
+              <OBJECT>
+                <ID name="" mc="Standard.TagParameter" uid="1f03f19d-df74-469b-9411-c75e618bff09"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[C:\Users\Richard\modelio\workspace\FCU_MM\Simulation]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Definition">
+              <FOREIGNID name="Root_filepath" mc="Standard.TagType" uid="3bf934f7-9529-4913-a002-16ce575a7985"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

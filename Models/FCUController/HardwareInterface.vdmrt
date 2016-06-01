@@ -1,0 +1,21 @@
+class HardwareInterface
+
+
+instance variables
+    
+  -- @ interface: type = input, name="RAT";
+  public static RAT : real := 0.0;
+  -- @ interface: type = input, name="RATSP";
+  public static RATSP : real := 0.0;
+
+instance variables
+
+  -- @ interface: type = output, name="valveOpen";
+  public static valveOpen : real := 0.0;
+  -- @ interface: type = output, name="fanSpeed";
+  public static fanSpeed : real := 0.0;
+  
+end HardwareInterface
+
+
+  

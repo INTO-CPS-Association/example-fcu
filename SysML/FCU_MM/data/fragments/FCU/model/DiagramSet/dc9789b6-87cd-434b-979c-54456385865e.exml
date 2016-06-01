@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FCU" version="4">
+  <OBJECT>
+    <ID name="FCU" mc="Standard.DiagramSet" uid="dc9789b6-87cd-434b-979c-54456385865e"/>
+    <PID name="FCU" mc="Standard.Project" uid="1b3dde40-4969-4926-9074-b33537e157e6"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[FCU]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

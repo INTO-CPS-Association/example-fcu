@@ -1,0 +1,46 @@
+class MechanicalController is subclass of Controller
+
+values
+  	tolerance:real=0.5;
+  	onValue:real=100;
+  	offValue:real=0;
+     
+instance variables
+
+	RAT:Sensor;
+	fanSpeed:Actuator;
+	valveOpen:Actuator;
+	RATSP:Sensor;
+
+operations
+
+public MechanicalController : Actuator * Actuator * Sensor * Sensor ==> MechanicalController
+MechanicalController(v,f,s,ratsp)==
+(
+	RAT:=s;
+	fanSpeed:=f;
+	valveOpen:=v;
+	RATSP:=ratsp;
+);
+
+private PIDcalculate:()==>()
+PIDcalculate()==
+(
+	if RAT.getReading() > RATSP.getReading() + tolerance then
+	( 	
+		valveOpen.setState(offValue);
+	    fanSpeed.setState(offValue);
+	)
+	else if RAT.getReading() < RATSP.getReading() - tolerance then
+	(
+		valveOpen.setState(onValue);
+	    fanSpeed.setState(onValue);
+	)
+);     
+
+                      
+thread
+	-- execute the control loop every 80 ms
+	periodic(80E6/*ms*/,0,0,0)(PIDcalculate); -- original 80e6
+	
+end MechanicalController

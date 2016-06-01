@@ -1,0 +1,29 @@
+-- File ValveActuator.vdmrt: model of a valve actuator that is used
+-- to pour water from the tank.
+
+class ActuatorLimited is subclass of Actuator
+	
+values
+	public max	: real = 20.0;
+	public min	: real = 0.0000001;
+
+instance variables
+
+handle : real->bool;
+
+operations
+
+public ActuatorLimited: real->bool ==> ActuatorLimited
+ActuatorLimited(h) == handle := h;
+
+public setState: real ==> ()
+setState(value)==
+(
+  
+	if value > max 
+	then let - = handle(max) in skip
+	else if value < min 
+	     then let - = handle(min) in skip 
+			 else let - = handle(value) in skip;
+)
+end ActuatorLimited

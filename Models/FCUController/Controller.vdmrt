@@ -1,0 +1,72 @@
+class Controller
+
+values
+	--SP:real=19;        --setPoint
+	K:real=50;         --Proportional gain 10
+	Td:real=0.10;      --Derivative time constant original 0.10
+	N:real=10;         --Derivative gain limitation oroginal = 10
+	Ti:real=5000;         --Integral time constant 3
+	b:real=1;          --Proportional setPoint weighting parameter
+	c:real=1;          --Derivative setPoint weighting parameter   
+	sampletime:real=1;       
+     
+instance variables
+	err:real:=0;            --to change in 20 sim model
+	factor:real:=0;
+	uDin:real:=0;
+	uP:real:=0;
+	uD:real:=0;
+	uI:real:=0;
+	control:real:=0.1;
+	RAT:Sensor;
+	fanSpeed:Actuator;
+	valveOpen:Actuator;
+	MV:real:=0;
+	totaluI:real:=0;
+	previousuI:real:=0;
+	totaluDin:real:=0;
+	previousuDin:real:=0;
+	RATSP:Sensor;
+
+operations
+
+public Controller : Actuator * Actuator * Sensor * Sensor  ==> Controller
+Controller(v,f,s,ratsp)==
+(
+	RAT:=s;
+	fanSpeed:=f;
+	valveOpen:=v;
+	RATSP:=ratsp;
+);
+
+private PIDcalculate:()==>()
+PIDcalculate()==
+(
+	MV:=RAT.getReading();
+	err:=RATSP.getReading()-MV;
+	factor:=Td/(sampletime+(Td/N));
+	uP:=K*(b*RATSP.getReading()-RAT.getReading());
+	
+	if RATSP.getReading() > 1 then -- anti windup resets integral when heating turned off
+		uI:=previousuI+sampletime*(K*err/Ti)
+	else 
+		uI:=0;
+
+	
+	previousuI:=uI;                                
+	
+	uDin:=c*RATSP.getReading()-MV;
+	previousuDin:=uDin;                            
+	uD:=factor*(uD/N+K*(uDin-previousuDin)); 
+	control:=uP+uI+uD;
+
+	valveOpen.setState(control);
+	fanSpeed.setState(control);
+);     
+
+                      
+thread
+	-- execute the control loop every 80 ms
+	periodic(1000E6/*ms*/,0,0,0)(PIDcalculate); -- original 80e6
+	
+end Controller

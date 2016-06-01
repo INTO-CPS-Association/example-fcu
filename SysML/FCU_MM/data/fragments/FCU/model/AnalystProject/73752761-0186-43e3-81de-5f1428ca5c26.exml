@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FCU" version="4">
+  <OBJECT>
+    <ID name="FCU" mc="Standard.AnalystProject" uid="73752761-0186-43e3-81de-5f1428ca5c26"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[FCU]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="PropertyRoot">
+        <COMPID name="FCU" mc="Standard.PropertyContainer" uid="18bc496c-1f71-4ddc-8b19-096fb721a892"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

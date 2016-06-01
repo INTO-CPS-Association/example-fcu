@@ -1,0 +1,20 @@
+class World
+
+operations
+public run : () ==> ()
+run() ==
+(
+	start(System`controller);
+	block();
+);
+
+block : () ==>()
+block()==skip;
+
+sync
+	per block => false;
+	
+values
+	public lamdaWall = 0.1192;
+
+end World

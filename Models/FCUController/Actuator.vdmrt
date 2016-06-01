@@ -1,0 +1,15 @@
+class Actuator
+
+instance variables
+
+handle : real->bool;
+
+operations
+
+public Actuator: real->bool ==> Actuator
+Actuator(h) == handle := h;
+
+public setState: real ==> ()
+setState(value)==let - = handle(value) in skip;
+
+end Actuator
