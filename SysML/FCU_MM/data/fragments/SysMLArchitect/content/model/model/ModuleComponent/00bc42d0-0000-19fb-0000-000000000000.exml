@@ -22,8 +22,8 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedProfile">
-        <COMPID name="sysml.diagrams" mc="Standard.Profile" uid="00bc42ac-0000-1013-0000-000000000000"/>
         <COMPID name="sysml" mc="Standard.Profile" uid="00bc42a4-0000-1968-0000-000000000000"/>
+        <COMPID name="sysml.diagrams" mc="Standard.Profile" uid="00bc42ac-0000-1013-0000-000000000000"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
