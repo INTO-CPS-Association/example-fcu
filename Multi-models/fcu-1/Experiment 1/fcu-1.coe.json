@@ -1,0 +1,11 @@
+{
+		"multimodel_path":"Multi-models/fcu-1/fcu-1.mm.json",
+		"algorithm":{
+				"type":"fixed-step",
+				"size":1
+		},
+		"livestream":{
+				"{controllerFMU}.controller”:[“fanSpeed"],
+				“{roomFMU}.room”:[“RAT"]
+		}
+}
