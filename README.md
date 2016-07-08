@@ -27,64 +27,57 @@ This is reflected in the CD, with direct connections between the elements. Each 
 
 ### Models
 
+
+Given the constituent elements identified in the SysML models above, the FCU pilot study comprises several (simulation) models for the 3- and 4-version of the pilots.
+
 #### Models - 3-model version
+
+The 3-model version comprises two 20-sim models: *RoomHeating* which models the elements of the room, walls and FCU; and the physical *Environment* which provides data on the environment temperature and scenario data based on change of room temperature set point. The final constituent element is a *Controller* VDM-RT model.
+
+Currently a single 20-sim model with two blocks is used to generate the *RoomHeating* and *Environment* FMUs. 
+
+
+The VDM controller model comprises a *Sensor* class provides access to the current room temperature, and a *LimitedActuator* class  provides output for the valveOpen and fanSpeed values. The actuator is limited such that values fall only between the real values 1.0 and 0.0000001.
 
 #### Models - 4-model version
 
+The 4-model version shares the *Environment* and *Controller* with the previous multi-model, splitting the *RoomHeating* model into separate *Room* and *Wall* models. 
 
 
 ### Multi-model
 
-#### Configuration - 3-model version
+#### 3-model version
 
-{
-    "fmus":{
-        "{controllerFMU}":"../FCU/FCUController.fmu?,
-        "{roomheatingFMU}":"../FCU/RoomHeating.fmu",
-        "{environmentFMU}":"../FCU/Environment"
-    },
-    "connections":{
-        "{environmentFMU}.env.RAT_OUT":["{controllerFMU}.controller.RATSP"],
-        "{environmentFMU}.env.OAT_OUT":["{roomheatingFMU}.room.OAT"],
-        "{controllerFMU}.controller.valveOpen":["{roomheatingFMU}.room.valveopen"],
-        "{controllerFMU}.controller.fanSpeed":["{roomheatingFMU}.room.fanspeed"],
-        "{roomheatingFMU}.room.RAT":["{controllerFMU}.controller.RAT"]
-    },
-    "parameters":{
-    },
-    "algorithm":{
-        "type":"fixed-step",
-        "size":0.005
-    }
-}
+The 3-model multi-model comprises 3 FMUs and 5 connections. The 3 FMUs -- FCUController.fmu, RoomHeating.fmu and Environment.fmu -- are exported from the VDM-RT and 20-sim models.  
 
-#### Configuration - 4-model version
+The connections are as follows: 
 
-{
-	"fmus":{
-		"{controllerFMU}":"../FCU/FCUController.fmu",
-		"{roomFMU}":"../FCU/Room.fmu",
-		"{wallFMU}":"../FCU/Wall.fmu",
-		"{environmentFMU}":"../FCU/Environment.fmu"
-	},
-	"connections":{
-		"{environmentFMU}.env.RAT_OUT":["{controllerFMU}.controller.RATSP"],
-		"{environmentFMU}.env.OAT_OUT":["{wallFMU}.wall.OAT"],
-		"{wallFMU}.wall.Tisurf":["{roomFMU}.room.Tisurf"],
-		"{roomFMU}.room.RAT":["{wallFMU}.wall.RAT"],
-		"{roomFMU}.room.RAT":["{controllerFMU}.controller.RAT"],
-		"{controllerFMU}.controller.valveOpen":["{roomFMU}.room.valveopen"],
-		"{controllerFMU}.controller.fanSpeed":["{roomFMU}.room.fanspeed"]
-	},
-	"parameters":{
-	},
-	"algorithm":{
-		"type":"fixed-step",
-		"size":0.005
-	}
-}
+- from the *EnvironmentFMUs* **RAT_OUT** port to the *ControllerFMU* **RATSP** port ;
+- from the *EnvironmentFMUs* **OAT_OUT** port to the *RoomHeatingFMU* **OAT**;
+-from the *ControllerFMUs* **valveOpen** port to the *RoomHeatingFMU* **valveopen**;
+- from the *ControllerFMUs* **fanSpeed** port to the *RoomHeatingFMU* **fanspeed**; and
+-from the *RoomHeatingFMU* **RAT** port to the *ControllerFMUs* **RAT**.
+
+There are no parameters to set.
+
+#### 4-model version
+
+In the 4-model version of the FCU multi-model there are 4 FMUs and 7 connections. The 4 FMUs -- FCUController.fmu, Room.fmu, Wall.fmu and Environment.fmu -- are exported from the VDM-RT and 20-sim models.  
+
+The connections are as follows: 
+- from the *EnvironmentFMUs* **RAT\_OUT** port to the *ControllerFMU* **RATSP** port ;
+- from the *EnvironmentFMUs* **OAT\_OUT** port to the *WallFMU* **OAT**;
+- from the *WallFMU* **Tisurf** port to the *RoomFMUs* **Tisurf**.
+- from the *RoomFMU* **RAT** port to the *WallFMUs* **RAT**.
+- from the *RoomFMU* **RAT** port to the *ControllerFMUs* **RAT**.
+- from the *ControllerFMUs* **valveOpen** port to the *RoomFMU* **valveopen**; and
+- from the *ControllerFMUs* **fanSpeed** port to the *RoomFMU* **fanspeed**.
+
+There are no parameters to set.
 
 
 ### Co-simulation
 
 ### Analyses and Experiments
+
+#### Design Space Exploration
