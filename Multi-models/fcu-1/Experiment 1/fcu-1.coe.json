@@ -5,7 +5,7 @@
 				"size":1
 		},
 		"livestream":{
-				"{controllerFMU}.controller”:[“fanSpeed"],
-				“{roomFMU}.room”:[“RAT"]
+				"{controllerFMU}.controller":["fanSpeed"],
+				"{roomFMU}.room":["RAT"]
 		}
 }

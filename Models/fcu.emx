@@ -29,8 +29,8 @@ specification_end;
     <Version>4.6</Version>
 <IsMainModel>0</IsMainModel>
   <KeepParameterValues>False</KeepParameterValues>
-    <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO-CPS SVN\WP3\T3_5_Pilot_Studies\UTRC Simple FCU\INTO-CPS\Models\20-sim\fcu.emx</LibraryPath>
-  <TimeStamp>2016-5-6 16:12:56</TimeStamp>
+    <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO Git\case-study_fcu\Models\fcu.emx</LibraryPath>
+  <TimeStamp>2016-7-11 14:00:05</TimeStamp>
 </Description>
 </Information>';
  type 'Mainmodel- Copy'
@@ -53,7 +53,7 @@ specification_end;
    signal out valveOpen;
    signal out fanSpeed;
  end;
- icon bg bottom shadow 11776947
+ icon bg shadow 11776947
   figures
    rectangle 732.1 217 803.9 247 color 0 fill 15132390;
    text 'name' 768 232.1 color 0 16;
@@ -301,7 +301,7 @@ equations
  implementation_end;
 specification_end;
 			end;
-   Environment 280 248
+   Environment 280.1 248
     description '<Information><Description><Version>4.6</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
     type Submodel
      ports
@@ -310,9 +310,9 @@ specification_end;
     end;
     implementation bg
      submodels
-      plug OAT_out 184 112;
+      plug OAT_out 184 176;
       plug RATSP_out 192 248;
-      OAT 88 112
+      OAT 88 176
 						specifications active 'from_file'
 							specification 'from_file'
  description '<Information><Description><Version>4.2</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><LibraryPath>Signal\Block Diagram Non-Linear\Function-Table.emx</LibraryPath><TimeStamp>2007-9-26 12:35:25</TimeStamp><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
@@ -323,14 +323,14 @@ specification_end;
  icon bg bottom
   figures
    group
-    rectangle 72 96 104 128 color 0 fill 15132390;
-    rectangle 80 104 96 120 color -1 fill 16777215;
-    rectangle 80 104 96.3 107.5 color -1 fill 16765363;
-    line 80 107.2 96 107.2 color 0 fill 16777215;
-    line 85.4 104.3 85.4 119.7 color 0 fill 16777215;
-    line 89 104.3 89 119.7 color 0 fill 16777215;
-    line 92.2 104 92.2 120 color 0 fill 16777215;
-    rectangle 80 104 96 120 color 0;
+    rectangle 72 160 104 192 color 0 fill 15132390;
+    rectangle 80 168 96 184 color -1 fill 16777215;
+    rectangle 80 168 96.3 171.5 color -1 fill 16765363;
+    line 80 171.2 96 171.2 color 0 fill 16777215;
+    line 85.4 168.3 85.4 183.7 color 0 fill 16777215;
+    line 89 168.3 89 183.7 color 0 fill 16777215;
+    line 92.2 168 92.2 184 color 0 fill 16777215;
+    rectangle 80 168 96 184 color 0;
    end;
  end;
  implementation eq
@@ -530,7 +530,7 @@ specification_end;
       RATSP\output -> RATSP_out;
      end;
     implementation_end;
-   Room 550.2 232
+   Room 552.1 232
     description '<Description>
  <Version>4.0</Version>
  <LibraryPath>Template\Submodel-Equation.emx</LibraryPath>
@@ -582,13 +582,13 @@ specification_end;
     end;
     icon bg
      figures
-      rectangle 504 208 596.5 256 color 0 fill 15132390;
-      text 'name' 549.6 232 color 0;
+      rectangle 505.8 208 598.3 256 color 0 fill 15132390;
+      text 'name' 551.4 232 color 0;
      terminals
-      valveopen 566.2 256 fixed;
-      RAT 595.2 232 fixed;
-      fanspeed 534.2 256 fixed;
-      Tisurf 504 232 fixed;
+      valveopen 568 256 fixed;
+      RAT 597 232 fixed;
+      fanspeed 536 256 fixed;
+      Tisurf 505.8 232 fixed;
     end;
     implementation eq
 externals
@@ -718,10 +718,11 @@ implementation_end;
     end;
     implementation eq
 parameters
-	real rohWall = 1312.0;
+	//design parameter
+	real global rhoWall  = 1312.0;
 	real cWall = 1360.71;
-	//real lamdaWall = 0.1192;
-	real global lamdaWall ('shared');
+	//design parameter
+	real global lambdaWall = 0.1192;
 	real lWall = 0.03; // original = 0.3
 	real aWall = 60.0;
 	real hi = 8.33;
@@ -736,8 +737,8 @@ variables
 	
 
 equations
-	R = lWall / (lamdaWall * aWall);
-	C = 0.5 * rohWall * cWall * lWall * aWall;
+	R = lWall / (lambdaWall * aWall);
+	C = 0.5 * rhoWall * cWall * lWall * aWall;
 	Tisurf = int ((hi * aWall * (RAT - Tisurf) + (Tosurf - Tisurf) / R) / C, TisurfInit);
 	Tosurf = int((ho * aWall * (OAT - Tosurf) + (Tisurf - Tosurf) / R) / C, TosurfInit);
 
@@ -745,7 +746,7 @@ equations
 implementation_end;
   end;
   connections
-   Controller\fanSpeed -> Room\fanspeed 816 288 520 288;
+   Controller\fanSpeed -> Room\fanspeed 744 280 552 280;
    Controller\valveOpen -> Room\valveopen 728 272 576 272;
    Environment\OAT_out -> Wall\OAT;
    Environment\RATSP_out -> Controller\RATSP 280 128 768 128;
@@ -820,6 +821,7 @@ end;
 <ExpData>
   <VersionNumber>4.6</VersionNumber>
   <ModelProperties>
+    <ModelProperty section="tools\graph editor" entry="showGrid" value="0"/>
     <ModelProperty section="CCodeDialog" entry="SubmodelName" value="Wall"/>
     <ModelProperty section="CCodeDialog" entry="TargetName" value="FMU 2.0 export for 20-sim submodel (GitHub)"/>
     <ModelProperty section="CCodeDialog" entry="TargetDirectory" value="c:\temp\%SUBMODEL_NAME%"/>
@@ -829,16 +831,20 @@ end;
     <Variable>
      <Name>Environment\OAT\filename</Name>
      <ArithmeticType>string</ArithmeticType>
-     <Value>&quot;oat.txt&quot;</Value>
+     <Value>&quot;&quot;</Value>
     </Variable>
     <Variable>
      <Name>Environment\RATSP\filename</Name>
      <ArithmeticType>string</ArithmeticType>
-     <Value>&quot;ratSP5WorkingDays.txt&quot;</Value>
+     <Value>&quot;&quot;</Value>
     </Variable>
     <Variable>
-     <Name>lamdaWall</Name>
-     <Value>200</Value>
+     <Name>lambdaWall</Name>
+     <Value>0.1192</Value>
+    </Variable>
+    <Variable>
+     <Name>rhoWall</Name>
+     <Value>1312</Value>
     </Variable>
    </Parameters>
    <Initials>
