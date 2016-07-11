@@ -1,1 +1,1 @@
-{"multimodel_path":"Multi-models/4-model/4-model.mm.json","startTime":0,"endTime":10000,"livestream":{"{controllerFMU}.controller":["fanSpeed"],"{roomFMU}.room":["RAT"]},"algorithm":{"type":"fixed-step","size":1}}
+{"multimodel_path":"Multi-models\\4-model\\4-model.mm.json","startTime":0,"endTime":1000,"livestream":{"{controllerFMU}.controller":["fanSpeed"],"{roomFMU}.room":["RAT"]},"algorithm":{"type":"fixed-step","size":1}}
