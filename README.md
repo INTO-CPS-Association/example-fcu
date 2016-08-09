@@ -93,7 +93,7 @@ There are two parameters to set: **lambdaWall** and **rhoWall** which define the
 
 Co-simulation of the full scenrio (outside air temperature and room set point) has a duration of 6800 seconds. Running the two multi-models produces the same results, as shown below.
 
-![Results](resources/fcu_results.png?raw=true "Results")
+![Results](resources/fcu_results.PNG?raw=true "Results")
 
 The results show that the set point (top left) is toggled between 20 and 0, with the fan (and valve) are adjusted to achieve the set point. The bottom right graph shows the ultimate result of the simulation -- that the room air temperature (RAT) meets the set point, maintains that temperature whilst required and then slowly drop in temperature until the set point returns to 20.
 
