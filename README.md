@@ -7,7 +7,7 @@ This example is inspired by the Heating Ventilation and Air Conditioning (HVAC) 
 The aim of the system is to maintain a set temperature in the single room in which the FCU is located.
 
 
-![Overview of the fan coil unit (FCU) example](src/resources/fcu_overview.png?raw=true "Overview of the fan coil unit (FCU) example")
+![Overview of the fan coil unit (FCU) example](resources/fcu_overview.png?raw=true "Overview of the fan coil unit (FCU) example")
 
 ## INTO-CPS Technology
 
@@ -19,22 +19,22 @@ The demonstration on INTO-CPS technologies with the FCU example concentrates on 
 
 Two versions of the FCU model are defined using the INTO-CPS SysML profile. The first corresponds to the architecture used in the baseline OpenModelica and Crescendo models. In this version, three constituent parts are defined: the *RoomHeating* subsystem, a *Controller* cyber component and the physical *Environment*. The first is a continuous subsystem and comprises the *Room* and *Wall* components.  The figure defines the model platform to be 20-sim, however, this could be OpenModelica too. All of the physical elements of the system are contained in a single CT model. The controller subsystem is a cyber element and modelled in VDM-RT.
 
-![Architecture Structure Diagram](src/resources/fcu_sysml_asd.png?raw=true "Architecture Structure Diagram")
+![Architecture Structure Diagram](resources/fcu_sysml_asd.png?raw=true "Architecture Structure Diagram")
 
 The connections between components, are similar to those in the baseline CT models, although it should be noted that the subsystem hierarchy is shown, with the *Room* component supplying and receiving the flows of the *RoomHeating* subsystem. The connections between CT and DE models show the interface that is managed during the co-simulation. Specifically, the room air temperature (*RAT*) from the CT system is communicated to the controller, which sets the fan speed *fanSpeed* and the valve open state *valveOpen* used by the Room component model *r*, with the aim of achieving the room air temperature set point *RATSP* provided by the user in the *Environment*. 
 
-![Connection Diagram](src/resources/fcu_sysml_cd.png?raw=true "Connection Diagram")
+![Connection Diagram](resources/fcu_sysml_cd.png?raw=true "Connection Diagram")
 
 
 #### 4-model Version
 
 Moving to a more 'pure' multi-modelling approach, the next model proposes an alternative subsystem structure. In this model, the ASD shows the HeatingSystem comprises four subsystems; the components comprising the *RoomHeating* subsystem defined above are lifted to be top-level components in their own right. 
 
-![Architecture Structure Diagram](src/resources/fcu_sysml_asd_mm.png?raw=true "Architecture Structure Diagram")
+![Architecture Structure Diagram](resources/fcu_sysml_asd_mm.png?raw=true "Architecture Structure Diagram")
 
 This is reflected in the CD, with direct connections between the elements. Each of the CT components (*Room*, *Wall* and *Environment*) may now be modelled in different notations.
 
-![Connection Diagram](src/resources/fcu_sysml_cd_mm.png?raw=true "Connection Diagram")
+![Connection Diagram](resources/fcu_sysml_cd_mm.png?raw=true "Connection Diagram")
 
 ### Models
 
@@ -93,7 +93,7 @@ There are two parameters to set: **lambdaWall** and **rhoWall** which define the
 
 Co-simulation of the full scenrio (outside air temperature and room set point) has a duration of 6800 seconds. Running the two multi-models produces the same results, as shown below.
 
-![Results](src/resources/fcu_results.png?raw=true "Results")
+![Results](resources/fcu_results.png?raw=true "Results")
 
 The results show that the set point (top left) is toggled between 20 and 0, with the fan (and valve) are adjusted to achieve the set point. The bottom right graph shows the ultimate result of the simulation -- that the room air temperature (RAT) meets the set point, maintains that temperature whilst required and then slowly drop in temperature until the set point returns to 20.
 
