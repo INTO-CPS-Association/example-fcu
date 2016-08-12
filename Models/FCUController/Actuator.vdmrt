@@ -2,14 +2,14 @@ class Actuator
 
 instance variables
 
-handle : real->bool;
+handle : RealPort;
 
 operations
 
-public Actuator: real->bool ==> Actuator
+public Actuator: RealPort ==> Actuator
 Actuator(h) == handle := h;
 
 public setState: real ==> ()
-setState(value)==let - = handle(value) in skip;
+setState(value) == handle.setValue(value);
 
 end Actuator

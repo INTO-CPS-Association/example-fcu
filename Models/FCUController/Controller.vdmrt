@@ -64,6 +64,13 @@ PIDcalculate()==
 	fanSpeed.setState(control);
 );     
 
+
+private DummyPIDcalculate:()==>()
+DummyPIDcalculate()==
+(
+	valveOpen.setState(RAT.getReading());
+	fanSpeed.setState(RAT.getReading());
+)
                       
 thread
 	-- execute the control loop every 80 ms
