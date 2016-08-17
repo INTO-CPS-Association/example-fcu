@@ -6,8 +6,8 @@
 		"{environmentFMU}": "Environment.fmu"
 	},
 	"connections": {
-		"{environmentFMU}.env.RAT_OUT": ["{controllerFMU}.controller.RATSP"],
-		"{environmentFMU}.env.OAT_OUT": ["{wallFMU}.wall.OAT"],
+		"{environmentFMU}.env.RATSP_out": ["{controllerFMU}.controller.RATSP"],
+		"{environmentFMU}.env.OAT_out": ["{wallFMU}.wall.OAT"],
 		"{wallFMU}.wall.Tisurf": ["{roomFMU}.room.Tisurf"],
 		"{roomFMU}.room.RAT": ["{wallFMU}.wall.RAT"],
 		"{roomFMU}.room.RAT": ["{controllerFMU}.controller.RAT"],
