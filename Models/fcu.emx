@@ -30,7 +30,7 @@ specification_end;
 <IsMainModel>0</IsMainModel>
   <KeepParameterValues>False</KeepParameterValues>
     <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO Git\case-study_fcu\Models\fcu.emx</LibraryPath>
-  <TimeStamp>2016-7-11 14:00:05</TimeStamp>
+  <TimeStamp>2016-7-11 16:38:29</TimeStamp>
 </Description>
 </Information>';
  type 'Mainmodel- Copy'
@@ -723,12 +723,12 @@ parameters
 	real cWall = 1360.71;
 	//design parameter
 	real global lambdaWall = 0.1192;
-	real lWall = 0.03; // original = 0.3
+	real lWall = 0.03;
 	real aWall = 60.0;
 	real hi = 8.33;
 	real ho = 33.33;
-	real TisurfInit = 16.0; // original = 16
-	real TosurfInit = 10.0; // original = 10
+	real TisurfInit = 16.0;
+	real TosurfInit = 10.0;
 	
 variables
 	real Tosurf;
@@ -837,14 +837,6 @@ end;
      <Name>Environment\RATSP\filename</Name>
      <ArithmeticType>string</ArithmeticType>
      <Value>&quot;&quot;</Value>
-    </Variable>
-    <Variable>
-     <Name>lambdaWall</Name>
-     <Value>0.1192</Value>
-    </Variable>
-    <Variable>
-     <Name>rhoWall</Name>
-     <Value>1312</Value>
     </Variable>
    </Parameters>
    <Initials>
