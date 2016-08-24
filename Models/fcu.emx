@@ -29,8 +29,8 @@ specification_end;
     <Version>4.6</Version>
 <IsMainModel>0</IsMainModel>
   <KeepParameterValues>False</KeepParameterValues>
-    <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO Git\case-study_fcu\Models\fcu.emx</LibraryPath>
-  <TimeStamp>2016-7-11 16:38:29</TimeStamp>
+    <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO_Git\case-study_fcu\Models\fcu.emx</LibraryPath>
+  <TimeStamp>2016-8-24 16:35:00</TimeStamp>
 </Description>
 </Information>';
  type 'Mainmodel- Copy'
@@ -52,6 +52,8 @@ specification_end;
    signal in RATSP;
    signal out valveOpen;
    signal out fanSpeed;
+   signal in energy;
+   signal in lIn;
  end;
  icon bg shadow 11776947
   figures
@@ -165,6 +167,8 @@ specification_end;
    plug RATSP 80 280;
    plug valveOpen 368 352.1;
    plug fanSpeed 360 304;
+   plug energy 30 30;
+   plug lIn 30 30;
   end;
   connections
    co_model_interface\fanSpeed -> fanSpeed;
@@ -530,7 +534,7 @@ specification_end;
       RATSP\output -> RATSP_out;
      end;
     implementation_end;
-   Room 552.1 232
+   Room 560 232
     description '<Description>
  <Version>4.0</Version>
  <LibraryPath>Template\Submodel-Equation.emx</LibraryPath>
@@ -579,21 +583,19 @@ specification_end;
       signal out RAT;
       signal in fanspeed;
       signal in Tisurf;
+      signal out energy;
     end;
     icon bg
      figures
-      rectangle 505.8 208 598.3 256 color 0 fill 15132390;
-      text 'name' 551.4 232 color 0;
+      rectangle 513.8 208 606.3 256 color 0 fill 15132390;
+      text 'name' 559.4 232 color 0;
      terminals
-      valveopen 568 256 fixed;
-      RAT 597 232 fixed;
-      fanspeed 536 256 fixed;
-      Tisurf 505.8 232 fixed;
+      valveopen 576 256 fixed;
+      RAT 605 232 fixed;
+      fanspeed 544 256 fixed;
+      Tisurf 513.8 232 fixed;
     end;
     implementation eq
-externals
-	real global export energy;
-
 parameters
 	real mdotwt = 0.1;
 	real LWT = 40.0;
@@ -658,54 +660,14 @@ implementation_end;
 equations
     collect (output) = input;
 implementation_end;
-   Wall 420.9 232
-    description '<Description>
- <Version>4.0</Version>
- <LibraryPath>Template\Submodel-Equation.emx</LibraryPath>
- <IsMainModel>1</IsMainModel>
- <KeepParameterValues>False</KeepParameterValues>
- <TimeStamp>2007-11-1 22:32:1</TimeStamp>
- <AllowLibraryUpdate>False</AllowLibraryUpdate>
-   <Configuration><struct>
-  <member>
-    <name>DocumentationMask</name>
-    <value>
-      <struct>
-        <member>
-          <name>MaskChoice</name>
-          <value>
-            <int>1</int>
-          </value>
-        </member>
-        <member>
-          <name>BitmapFilename</name>
-          <value>
-            <string></string>
-          </value>
-        </member>
-        <member>
-          <name>ScriptFilename</name>
-          <value>
-            <string></string>
-          </value>
-        </member>
-        <member>
-          <name>Scaling</name>
-          <value>
-            <double>1</double>
-          </value>
-        </member>
-      </struct>
-    </value>
-  </member>
-</struct>
-</Configuration>
-</Description>';
+   WallDSE 420.9 232
+    description '<Information><Description><Version>4.0</Version><LibraryPath>Template\Submodel-Equation.emx</LibraryPath><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><TimeStamp>2007-11-1 22:32:1</TimeStamp><AllowLibraryUpdate>False</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
     type Submodel
      ports
       signal in RAT;
       signal out Tisurf;
       signal in OAT;
+      signal out lambdaOut;
     end;
     icon bg
      figures
@@ -719,10 +681,10 @@ implementation_end;
     implementation eq
 parameters
 	//design parameter
-	real global rhoWall  = 1312.0;
+	real global rhoWall;
 	real cWall = 1360.71;
 	//design parameter
-	real global lambdaWall = 0.1192;
+	real global lambda_Wall = 0.1;
 	real lWall = 0.03;
 	real aWall = 60.0;
 	real hi = 8.33;
@@ -737,53 +699,24 @@ variables
 	
 
 equations
-	R = lWall / (lambdaWall * aWall);
+	R = lWall / (lambda_Wall * aWall);
 	C = 0.5 * rhoWall * cWall * lWall * aWall;
 	Tisurf = int ((hi * aWall * (RAT - Tisurf) + (Tosurf - Tisurf) / R) / C, TisurfInit);
 	Tosurf = int((ho * aWall * (OAT - Tosurf) + (Tisurf - Tosurf) / R) / C, TosurfInit);
-
-
-implementation_end;
+	lambdaOut = lambda_Wall;implementation_end;
   end;
   connections
    Controller\fanSpeed -> Room\fanspeed 744 280 552 280;
    Controller\valveOpen -> Room\valveopen 728 272 576 272;
-   Environment\OAT_out -> Wall\OAT;
+   Environment\OAT_out -> WallDSE\OAT;
    Environment\RATSP_out -> Controller\RATSP 280 128 768 128;
+   Room\energy -> Controller\energy;
    Room\RAT -> Splitter\input;
    Splitter\output -> Controller\RAT;
-   Splitter\output -> Wall\RAT 632 160 352 160 352 216;
-   Wall\Tisurf -> Room\Tisurf;
+   Splitter\output -> WallDSE\RAT 632 160 352 160 352 216;
+   WallDSE\lambdaOut -> Controller\lIn;
+   WallDSE\Tisurf -> Room\Tisurf;
   end;
-  figures
-   group
-    line 1183.5 2826 1062.1 2826 color 0 width 4;
-    line 1084.8 2802 1062.1 2826 1084.8 2850.1 1084.8 2802 1084.8 2802 color -1 fill 0 width 0;
-    line 1084.8 2802 1062.1 2826 1084.8 2850.1 1084.8 2802 color 0 width 4;
-    rectangle 1183.5 2697.6 1301.1 2946.5 color 0 fill 15132390 width 4;
-    line 1191.1 2753.8 1202.4 2753.8 1202.4 2721.7 1217.6 2721.7 1217.6 2753.8 1232.8 2753.8 1232.8 2721.7 1240.4 2721.7 color 16711680 width 4;
-    line 1244.2 2761.8 1251.7 2761.8 1251.7 2810 1255.5 2802 color 0 width 4;
-    line 1248 2802 1251.7 2810 color 0 width 4;
-    line 1198.6 2858.2 1229 2858.2 1274.5 2826 color 0 width 7;
-    text 'SࠅÀࠅ?柵?฀牁慩lࠅ' 1244.2 3038.8 color 0 '牁慩lࠅ' 11 italic;
-    rectangle 940.7 2697.6 1058.3 2946.5 color 0 fill 15132390 width 4;
-    text 'ZࠅÀࠅ?柵?฀牁慩lࠅ' 1003.3 2814 color 16711680 '牁慩lࠅ' 14;
-    text 'HࠅÀࠅ?柵?฀牁慩lࠅ' 999.5 3038.8 color 0 '牁慩lࠅ' 11 italic;
-   end;
-   group
-    line 1183.5 2826 1062.1 2826 color 0 width 4;
-    line 1084.8 2802 1062.1 2826 1084.8 2850.1 1084.8 2802 1084.8 2802 color -1 fill 0 width 0;
-    line 1084.8 2802 1062.1 2826 1084.8 2850.1 1084.8 2802 color 0 width 4;
-    rectangle 1183.5 2697.6 1301.1 2946.5 color 0 fill 15132390 width 4;
-    line 1191.1 2753.8 1202.4 2753.8 1202.4 2721.7 1217.6 2721.7 1217.6 2753.8 1232.8 2753.8 1232.8 2721.7 1240.4 2721.7 color 16711680 width 4;
-    line 1244.2 2761.8 1251.7 2761.8 1251.7 2810 1255.5 2802 color 0 width 4;
-    line 1248 2802 1251.7 2810 color 0 width 4;
-    line 1198.6 2858.2 1229 2858.2 1274.5 2826 color 0 width 7;
-    text 'SࠅÀࠅ?柵?฀牁慩lࠅ' 1244.2 3038.8 color 0 '牁慩lࠅ' 11 italic;
-    rectangle 940.7 2697.6 1058.3 2946.5 color 0 fill 15132390 width 4;
-    text 'ZࠅÀࠅ?柵?฀牁慩lࠅ' 1003.3 2814 color 16711680 '牁慩lࠅ' 14;
-    text 'HࠅÀࠅ?柵?฀牁慩lࠅ' 999.5 3038.8 color 0 '牁慩lࠅ' 11 italic;
-   end;
  implementation_end;
 specification_end;
 	specification 'Room'
@@ -822,7 +755,7 @@ end;
   <VersionNumber>4.6</VersionNumber>
   <ModelProperties>
     <ModelProperty section="tools\graph editor" entry="showGrid" value="0"/>
-    <ModelProperty section="CCodeDialog" entry="SubmodelName" value="Wall"/>
+    <ModelProperty section="CCodeDialog" entry="SubmodelName" value="WallDSE"/>
     <ModelProperty section="CCodeDialog" entry="TargetName" value="FMU 2.0 export for 20-sim submodel (GitHub)"/>
     <ModelProperty section="CCodeDialog" entry="TargetDirectory" value="c:\temp\%SUBMODEL_NAME%"/>
   </ModelProperties>
@@ -837,6 +770,10 @@ end;
      <Name>Environment\RATSP\filename</Name>
      <ArithmeticType>string</ArithmeticType>
      <Value>&quot;&quot;</Value>
+    </Variable>
+    <Variable>
+     <Name>rhoWall</Name>
+     <Value>1312</Value>
     </Variable>
    </Parameters>
    <Initials>
@@ -858,7 +795,7 @@ end;
     <VarName>Room\RAT</VarName>
     <VarName>Environment\OAT\output</VarName>
     <VarName>Room\Tisurf</VarName>
-    <VarName>Wall\Tosurf</VarName>
+    <VarName>WallDSE\Tosurf</VarName>
     <VarName>Room\totalEnergyInput</VarName>
     <VarName>Environment\RATSP\output</VarName>
     <VarName>SetPoint</VarName>
@@ -1489,7 +1426,7 @@ end;
        </XCurveData>
        <YCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>Wall\Tosurf</VarName>
+        <VarName>WallDSE\Tosurf</VarName>
        </YCurveData>
       </Curve>
      </Curves>
@@ -2223,6 +2160,9 @@ end;
   </ExportData>
   <BreakPoints>
   </BreakPoints>
+  <AnimationPlayback>
+   <PlaybackSpeed>1</PlaybackSpeed>
+  </AnimationPlayback>
 </ExpData>
   </Experiment>
 </Experiments>
