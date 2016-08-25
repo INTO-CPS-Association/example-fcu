@@ -31,6 +31,7 @@
         <COMPID name="Subsystem" mc="Standard.Stereotype" uid="50d159b2-4d32-40ad-8990-c686943cb1f3"/>
         <COMPID name="Cyber" mc="Standard.Stereotype" uid="1c2bc602-60a9-401c-923b-0c12269afd17"/>
         <COMPID name="Physical" mc="Standard.Stereotype" uid="c590a3bb-0ca5-4d18-af5c-cade72a3f371"/>
+        <COMPID name="Depends" mc="Standard.Stereotype" uid="22d48693-4c9b-4f88-8aa1-284a2c772706"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
