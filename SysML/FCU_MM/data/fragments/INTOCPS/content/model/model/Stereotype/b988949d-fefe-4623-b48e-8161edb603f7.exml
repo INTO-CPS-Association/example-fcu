@@ -49,7 +49,7 @@
             <ATT name="ParamNumber"><![CDATA[1]]></ATT>
             <ATT name="IsQualified">false</ATT>
             <ATT name="BelongToPrototype">false</ATT>
-            <ATT name="IsHidden">false</ATT>
+            <ATT name="IsHidden">true</ATT>
             <ATT name="LabelKey"><![CDATA[%tagtype.component.guid.label]]></ATT>
             <ATT name="Name"><![CDATA[EComponent_guid]]></ATT>
             <ATT name="status">1970354901745664</ATT>
