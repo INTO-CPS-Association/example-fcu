@@ -9,21 +9,20 @@ values
 
 instance variables
 
-handle : real->bool;
+handle : RealPort;
 
 operations
 
-public ActuatorLimited: real->bool ==> ActuatorLimited
+public ActuatorLimited: RealPort ==> ActuatorLimited
 ActuatorLimited(h) == handle := h;
 
 public setState: real ==> ()
 setState(value)==
-(
-  
+(  
 	if value > max 
-	then let - = handle(max) in skip
+	then handle.setValue(max)
 	else if value < min 
-	     then let - = handle(min) in skip 
-			 else let - = handle(value) in skip;
+	     then handle.setValue(min) 
+			 else handle.setValue(value);
 )
 end ActuatorLimited

@@ -4,6 +4,10 @@ instance variables
 	
   -- Hardware interface variable required by FMU Import/Export
   public static hwi: HardwareInterface := new HardwareInterface();  
+  valve : Actuator;
+  fan : Actuator;
+  sensor : Sensor;
+  energy : Sensor;
   
 	public static controller : [Controller] := nil;
 	
@@ -14,15 +18,12 @@ operations
 public System : () ==> System
 System () == 
 (
-
-  let valve = new Actuator(lambda x: real & 
-                        Reflect`setMember(System`hwi,"valveOpen",x) ),
-	    fan = new Actuator(lambda x: real & 
-                        Reflect`setMember(System`hwi,"fanSpeed",x) ),
-	    sensor = new Sensor(lambda -:bool& hwi.RAT),
-	    energy = new Sensor(lambda -:bool& hwi.RATSP)
-	in
-       controller := new Controller(valve, fan, sensor, energy);
+	valve :=  new ActuatorLimited(hwi.valveOpen);--new ActuatorLimited(hwi.valveOpen);
+	fan := new ActuatorLimited(hwi.fanSpeed);--new ActuatorLimited(hwi.fanSpeed);
+	sensor := new Sensor(hwi.RAT);
+	energy := new Sensor(hwi.RATSP);
+  
+  controller := new Controller(valve, fan, sensor, energy);
 	
 	cpu.deploy(controller);
 );

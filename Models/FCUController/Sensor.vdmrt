@@ -2,14 +2,14 @@ class Sensor
 	
 instance variables
 
-  handle : bool->real;
+  handle : RealPort;
 
 operations
 
-  public Sensor: bool->real ==> Sensor
+  public Sensor: RealPort ==> Sensor
   Sensor(h) == handle := h;
 
   public getReading: () ==> real
-  getReading()==return handle(true);
+  getReading()== handle.getValue();
 
 end Sensor
