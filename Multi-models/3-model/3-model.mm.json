@@ -5,8 +5,8 @@
 		"{environmentFMU}": "Environment.fmu"
 	},
 	"connections": {
-		"{environmentFMU}.env.RATSP_out": ["{controllerFMU}.controller.RATSP"],
-		"{environmentFMU}.env.OAT_out": ["{roomheatingFMU}.room.OAT"],
+		"{environmentFMU}.env.RAT_OUT": ["{controllerFMU}.controller.RATSP"],
+		"{environmentFMU}.env.OAT_OUT": ["{roomheatingFMU}.room.OAT"],
 		"{controllerFMU}.controller.valveOpen": ["{roomheatingFMU}.room.valveopen"],
 		"{controllerFMU}.controller.fanSpeed": ["{roomheatingFMU}.room.fanspeed"],
 		"{roomheatingFMU}.room.RAT": ["{controllerFMU}.controller.RAT"]

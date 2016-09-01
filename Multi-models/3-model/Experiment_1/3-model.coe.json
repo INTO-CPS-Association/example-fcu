@@ -1,11 +1,1 @@
-{
-		"multimodel_path":"Multi-models/3-model/3-model.mm.json",
-		"algorithm":{
-				"type":"fixed-step",
-				"size":1
-		},
-		"livestream":{
-				"{controllerFMU}.controller":["fanSpeed"],
-				"{roomheatingFMU}.room":["RAT"]
-		}
-}
+{"startTime":0,"endTime":5000,"multimodel_path":"Multi-models/3-model/3-model.mm.json","livestream":{"{controllerFMU}.controller":["fanSpeed"],"{roomheatingFMU}.room":["RAT"],"{environmentFMU}.env":["RAT_OUT","OAT_OUT"]},"algorithm":{"type":"fixed-step","size":1}}
