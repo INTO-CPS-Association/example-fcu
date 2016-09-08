@@ -30,7 +30,7 @@ specification_end;
 <IsMainModel>0</IsMainModel>
   <KeepParameterValues>False</KeepParameterValues>
     <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO_Git\case-study_fcu\Models\fcu.emx</LibraryPath>
-  <TimeStamp>2016-8-24 16:35:00</TimeStamp>
+  <TimeStamp>2016-9-8 14:38:39</TimeStamp>
 </Description>
 </Information>';
  type 'Mainmodel- Copy'
@@ -660,7 +660,7 @@ implementation_end;
 equations
     collect (output) = input;
 implementation_end;
-   WallDSE 420.9 232
+   Wall 420.9 232
     description '<Information><Description><Version>4.0</Version><LibraryPath>Template\Submodel-Equation.emx</LibraryPath><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><TimeStamp>2007-11-1 22:32:1</TimeStamp><AllowLibraryUpdate>False</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
     type Submodel
      ports
@@ -708,14 +708,14 @@ equations
   connections
    Controller\fanSpeed -> Room\fanspeed 744 280 552 280;
    Controller\valveOpen -> Room\valveopen 728 272 576 272;
-   Environment\OAT_out -> WallDSE\OAT;
+   Environment\OAT_out -> Wall\OAT;
    Environment\RATSP_out -> Controller\RATSP 280 128 768 128;
    Room\energy -> Controller\energy;
    Room\RAT -> Splitter\input;
    Splitter\output -> Controller\RAT;
-   Splitter\output -> WallDSE\RAT 632 160 352 160 352 216;
-   WallDSE\lambdaOut -> Controller\lIn;
-   WallDSE\Tisurf -> Room\Tisurf;
+   Splitter\output -> Wall\RAT 632 160 352 160 352 216;
+   Wall\lambdaOut -> Controller\lIn;
+   Wall\Tisurf -> Room\Tisurf;
   end;
  implementation_end;
 specification_end;
@@ -755,7 +755,7 @@ end;
   <VersionNumber>4.6</VersionNumber>
   <ModelProperties>
     <ModelProperty section="tools\graph editor" entry="showGrid" value="0"/>
-    <ModelProperty section="CCodeDialog" entry="SubmodelName" value="WallDSE"/>
+    <ModelProperty section="CCodeDialog" entry="SubmodelName" value="Room"/>
     <ModelProperty section="CCodeDialog" entry="TargetName" value="FMU 2.0 export for 20-sim submodel (GitHub)"/>
     <ModelProperty section="CCodeDialog" entry="TargetDirectory" value="c:\temp\%SUBMODEL_NAME%"/>
   </ModelProperties>
@@ -795,7 +795,7 @@ end;
     <VarName>Room\RAT</VarName>
     <VarName>Environment\OAT\output</VarName>
     <VarName>Room\Tisurf</VarName>
-    <VarName>WallDSE\Tosurf</VarName>
+    <VarName>Wall\Tosurf</VarName>
     <VarName>Room\totalEnergyInput</VarName>
     <VarName>Environment\RATSP\output</VarName>
     <VarName>SetPoint</VarName>
@@ -1426,7 +1426,7 @@ end;
        </XCurveData>
        <YCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>WallDSE\Tosurf</VarName>
+        <VarName>Wall\Tosurf</VarName>
        </YCurveData>
       </Curve>
      </Curves>
@@ -2160,9 +2160,6 @@ end;
   </ExportData>
   <BreakPoints>
   </BreakPoints>
-  <AnimationPlayback>
-   <PlaybackSpeed>1</PlaybackSpeed>
-  </AnimationPlayback>
 </ExpData>
   </Experiment>
 </Experiments>
