@@ -1,0 +1,1 @@
+{"startTime":0,"endTime":5000,"multimodel_path":"Multi-models\\4-model\\4-model.mm.json","livestream":{"{roomFMU}.room":["RAT"],"{environmentFMU}.env":["OAT_OUT","RAT_OUT"],"{controllerFMU}.controller":["valveOpen"],"{wallFMU}.wall":["lambdaOut"]},"algorithm":{"type":"fixed-step","size":1}}

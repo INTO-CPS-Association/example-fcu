@@ -1,0 +1,30 @@
+model IntegratedSystem
+  SingleRoom singleroom1 annotation(Placement(visible = true, transformation(origin = {76, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Sources.Constant qLoad(k = 0) annotation(Placement(visible = true, transformation(origin = {39, -1}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+  FCU fcu1(MWater = 20) annotation(Placement(visible = true, transformation(origin = {6, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Fan fan1(mdontSupFan = 1.1) annotation(Placement(visible = true, transformation(origin = {-34, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Coil coil1(aCoil = 0.5) annotation(Placement(visible = true, transformation(origin = {-34, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Sources.Constant AHUSupAirTemp(k = 16) annotation(Placement(visible = true, transformation(origin = {-72, -20}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+  Modelica.Blocks.Sources.Constant HpWaterOutTemp(k = 39) annotation(Placement(visible = true, transformation(origin = {-72, 34}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+  Modelica.Blocks.Sources.Constant HPWaterInTemp(k = 40) annotation(Placement(visible = true, transformation(origin = {-73, 63}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+  FCUController fcucontroller1 annotation(Placement(visible = true, transformation(origin = {-74, 8}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Discrete.Sampler Sensor(samplePeriod = 0.083) annotation(Placement(visible = true, transformation(origin = {1, -79}, extent = {{-5, -5}, {5, 5}}, rotation = 180)));
+  Modelica.Blocks.Sources.Trapezoid OAT(amplitude = 10, rising = 3, width = 10, falling = 4, period = 24, offset = 5, startTime = 0) annotation(Placement(visible = true, transformation(origin = {39, -21}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+equation
+  connect(OAT.y, singleroom1.OAT) annotation(Line(points = {{44.5, -21}, {56, -21}, {56, -8}, {66, -8}}, color = {0, 0, 127}));
+  connect(Sensor.y, fcucontroller1.RAT) annotation(Line(points = {{-5, -79}, {-94, -79}, {-94, 8}, {-84, 8}, {-84, 8}}, color = {0, 0, 127}));
+  connect(singleroom1.RAT, Sensor.u) annotation(Line(points = {{86, 0}, {90, 0}, {90, -80}, {8, -80}, {8, -80}}, color = {0, 0, 127}));
+  connect(fcucontroller1.valveOpening, coil1.valvePos) annotation(Line(points = {{-64, 14}, {-52, 14}, {-52, 50}, {-44, 50}}, color = {0, 0, 127}));
+  connect(fcucontroller1.damperOpening, fan1.fanDamperPos) annotation(Line(points = {{-64, 0}, {-50, 0}, {-50, -30}, {-44, -30}}, color = {0, 0, 127}));
+  connect(singleroom1.RAT, coil1.RAT) annotation(Line(points = {{86, 0}, {90, 0}, {90, 30}, {-68, 30}, {-68, 46}, {-44, 46}}, color = {0, 0, 127}));
+  connect(HPWaterInTemp.y, coil1.waterInTemp) annotation(Line(points = {{-67.5, 63}, {-56.5, 63}, {-56.5, 54}, {-44.5, 54}, {-44.5, 54}}, color = {0, 0, 127}));
+  connect(HpWaterOutTemp.y, coil1.waterOutTemp) annotation(Line(points = {{-66.5, 34}, {-56.5, 34}, {-56.5, 42}, {-44.5, 42}}, color = {0, 0, 127}));
+  connect(AHUSupAirTemp.y, fan1.AHUAirInTemp) annotation(Line(points = {{-66.5, -20}, {-54.5, -20}, {-54.5, -22}, {-44.5, -22}, {-44.5, -22}}, color = {0, 0, 127}));
+  connect(coil1.qCoil, fcu1.qCoil) annotation(Line(points = {{-23.8, 50}, {-15.8, 50}, {-15.8, 16}, {-3.8, 16}, {-3.8, 16}}, color = {0, 0, 127}));
+  connect(fcu1.coilTemp, coil1.coilTemp) annotation(Line(points = {{16.4, 6}, {26.4, 6}, {26.4, 68}, {-49.6, 68}, {-49.6, 58}, {-43.6, 58}}, color = {0, 0, 127}));
+  connect(fan1.qFan, fcu1.qFan) annotation(Line(points = {{-23.6, -30}, {-15.6, -30}, {-15.6, 4}, {-3.6, 4}, {-3.6, 4}}, color = {0, 0, 127}));
+  connect(fcu1.coilTemp, fan1.coilTemp) annotation(Line(points = {{16.4, 6}, {26.4, 6}, {26.4, -48}, {-49.6, -48}, {-49.6, -38}, {-43.6, -38}, {-43.6, -38}}, color = {0, 0, 127}));
+  connect(fcu1.qFCU, singleroom1.qAir) annotation(Line(points = {{16, 14}, {54, 14}, {54, 10}, {66, 10}}, color = {0, 0, 127}));
+  connect(qLoad.y, singleroom1.qLoad) annotation(Line(points = {{44.5, -1}, {58, -1}, {58, 2}, {66, 2}, {66, 2}}, color = {0, 0, 127}));
+  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+end IntegratedSystem;
