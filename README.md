@@ -9,6 +9,13 @@ The aim of the system is to maintain a set temperature in the single room in whi
 
 ![Overview of the fan coil unit (FCU) example](resources/fcu_overview.png?raw=true "Overview of the fan coil unit (FCU) example")
 
+## Example Artefacts Overview
+
+The example is available at https://github.com/into-cps/case-study_fcu in the *master* branch. There are several subfolders for the various elements: DSEs - contains various work in progress DSE scripts to alter CT and DE parameters ; FCU - contains the various FMUs of the study; Models - contains the constituent models defined using the INTO-CPS simulation technologies; Multi-models - contains the multi-model definitions and co-simulation configurations - with 3- and 4-model options; SysML - contains the SysML model defined for the study; resources - various images for the purposes of this readme file; and userMetricScripts - contains files for DSE analysis. 
+
+The case-study_fcu folder can be opened in the INTO-CPS application to run the various co-simulations as detailed in this document.
+
+
 ## INTO-CPS Technology
 
 The demonstration on INTO-CPS technologies with the FCU example concentrates on the INTO-CPS SysML profile below.
