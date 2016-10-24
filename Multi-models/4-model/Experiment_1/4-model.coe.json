@@ -1,1 +1,1 @@
-{"startTime":0,"endTime":3000,"multimodel_path":"Multi-models/4-model/4-model.mm.json","livestream":{"{roomFMU}.room":["RAT"],"{controllerFMU}.controller":["fanSpeed"],"{environmentFMU}.env":["OAT_OUT","RAT_OUT"]},"algorithm":{"type":"fixed-step","size":1}}
+{"startTime":0,"endTime":6800,"multimodel_path":"Multi-models/4-model/4-model.mm.json","livestream":{"{roomFMU}.room":["RAT"],"{controllerFMU}.controller":["fanSpeed"],"{environmentFMU}.env":["OAT_OUT","RAT_OUT"]},"algorithm":{"type":"fixed-step","size":1}}
