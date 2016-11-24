@@ -1,7 +1,7 @@
 {
 	"fmus": {
 		"{controllerFMU}": "FCUController_Limited.fmu",
-		"{roomheatingFMU}": "RoomWithFCU_Hassan_1_RoomHeating.fmu",
+		"{roomheatingFMU}": "RoomHeating_OM_RH.fmu",
 		"{environmentFMU}": "Environment.fmu"
 	},
 	"connections": {

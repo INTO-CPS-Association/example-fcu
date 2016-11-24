@@ -1,6 +1,6 @@
 {"fmus":
  {"{controllerFMU}":"FCUController_Limited.fmu",
-  "{roomFMU}":"RoomWithFCU_Hassan_1_Room.fmu",
+  "{roomFMU}":"Room_OM.fmu",
   "{wallFMU}":"Wall.fmu",
   "{environmentFMU}":"Environment.fmu"},
   "connections":{
