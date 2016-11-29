@@ -28,17 +28,6 @@ operations
 
 	public pure getValue : () ==> FmiPortType
 	getValue() == is subclass responsibility;
-
-	public static create: FmiPortType ==> IntPort | BoolPort | RealPort | StringPort
-	create(v) ==
-		if is_(v, String) then
-			return new StringPort(v)
-		elseif is_(v,bool) then
-			return new BoolPort(v)
-	 elseif is_(v,int) then
-			return new IntPort(v)
-	else
-			return new RealPort(v)
 			
 end Port
 
