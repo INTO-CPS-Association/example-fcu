@@ -60,7 +60,7 @@ PIDcalculate()==
 	uD:=factor*(uD/N+K*(uDin-previousuDin)); 
 	control:=uP+uI+uD;
 
-  let - = CSV`fwriteval("fcu.log", [time/1e9, control, uP, uI, uD], <append>) in skip;
+--  let - = CSV`fwriteval("fcu.log", [time/1e9, control, uP, uI, uD], <append>) in skip;
 
 	valveOpen.setState(control);
 	fanSpeed.setState(control);
@@ -76,7 +76,7 @@ DummyPIDcalculate()==
          
 functions
 
-	private pure getFrequency : () -> real
+	private getFrequency : () -> real
 	getFrequency() ==    HardwareInterface`controllerFrequency.getValue();
 	      
                       
