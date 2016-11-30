@@ -76,7 +76,7 @@ DummyPIDcalculate()==
          
 functions
 
-	private pure getFrequency : () -> real
+	private getFrequency : () -> real
 	getFrequency() ==    HardwareInterface`controllerFrequency.getValue();
 	      
                       
