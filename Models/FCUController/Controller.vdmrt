@@ -60,8 +60,6 @@ PIDcalculate()==
 	uD:=factor*(uD/N+K*(uDin-previousuDin)); 
 	control:=uP+uI+uD;
 
-  let - = CSV`fwriteval("fcu.log", [time/1e9, control, uP, uI, uD], <append>) in skip;
-
 	valveOpen.setState(control);
 	fanSpeed.setState(control);
 );     
