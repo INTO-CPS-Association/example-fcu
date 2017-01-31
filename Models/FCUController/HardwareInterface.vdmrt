@@ -1,28 +1,29 @@
+--##	EXPORT	d0af1f24f7753bae30072a5ec56c4047905229d	FCUController_Limited.fmu	2017-31-01 11:28:01	tool-wrapper	{"name":"fmu-import-export","version":"0.1.6"}
 class HardwareInterface
 
 
 instance variables
     
   -- @ interface: type = input, name="RAT";
-  public static RAT : RealPort := new RealPort(0.0);
+  public  RAT : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="RATSP";
-  public static RATSP : RealPort := new RealPort(0.0);
+  public  RATSP : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="energy";
-  public static energy : RealPort := new RealPort(0.0);
+  public  energy : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="lIn";
-  public static lIn : RealPort := new RealPort(0.0);
+  public  lIn : RealPort := new RealPort(0.0);
 
 instance variables
 
   -- @ interface: type = output, name="valveOpen";
-  public static valveOpen : RealPort := new RealPort(0.0);
+  public  valveOpen : RealPort := new RealPort(0.0);
   -- @ interface: type = output, name="fanSpeed";
-  public static fanSpeed : RealPort := new RealPort(0.0);
+  public  fanSpeed : RealPort := new RealPort(0.0);
   
  values
  
   -- @ interface: type = parameter, name="controllerFrequency";
-  public static controllerFrequency : RealPort = new RealPort(1000E6);
+  public  controllerFrequency : RealPort = new RealPort(1000E6);
  
   
 end HardwareInterface
