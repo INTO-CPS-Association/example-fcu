@@ -80,6 +80,7 @@ functions
                       
 thread
 	-- execute the control loop every 80 ms
-	periodic((HardwareInterface`controllerFrequency.getValue())/*ms*/,0,0,0)(PIDcalculate); -- original 80e6
+	-- periodic((HardwareInterface`controllerFrequency.getValue())/*ms*/,0,0,0)(PIDcalculate); -- original 80e6
+	periodic(1000E6/*ms*/,0,0,0)(PIDcalculate); -- original 80e6
 	
 end Controller
