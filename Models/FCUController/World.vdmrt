@@ -1,4 +1,6 @@
 class World
+values
+	public lamdaWall = 0.1192;
 
 operations
 public run : () ==> ()
@@ -8,13 +10,11 @@ run() ==
 	block();
 );
 
-block : () ==>()
+private block : () ==>()
 block()==skip;
 
 sync
 	per block => false;
 	
-values
-	public lamdaWall = 0.1192;
 
 end World
