@@ -1,42 +1,28 @@
---##	EXPORT	ce8057ec534ba2ddc5a800f1a1ec60ac039428d8	FCUController.fmu	2017-28-03 15:35:18	tool-wrapper	{"name":"fmu-import-export","version":"0.2.1-SNAPSHOT"}
---##	EXPORT	59339ede1b6ec234c36880e170d1728f206e5dad	FCUController.fmu	2017-28-03 10:49:12	tool-wrapper	{"name":"fmu-import-export","version":"0.2.1-SNAPSHOT"}
---##	EXPORT	2f0930cf4b28f289b0e9456c6354eaac632de51c	FCUController-SourceCode.fmu	2017-23-01 19:23:09	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	75296e5d1c9b2e6763343ab6ee24a8b32e6091ad	FCUController-Standalone.fmu	2017-23-01 19:20:37	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	6684b3e444222e2f53d57c060ddeabe9a595813a	FCUController-Standalone.fmu	2017-23-01 19:19:10	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	85c6afd46532bffec12ac9bcc82c9c4acac92c0d	FCUController-Standalone.fmu	2017-23-01 19:18:54	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	66811b568860bb02041f9111ee04d50cececbd8e	FCUController-SourceCode.fmu	2017-23-01 14:07:41	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	3a1d70164602f70d0b3fe779dc42c7eb7face331	FCUController-Standalone.fmu	2017-23-01 13:39:46	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	471bd5435cd6e884e537e2d98dac9d02a7ebd7bb	FCUController-SourceCode.fmu	2017-23-01 13:34:21	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	cd9ee5cd016ca2db03e6f4fb0143bb1d00ececf1	FMU.fmu	2017-23-01 13:26:30	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	fab57ee6bf57d7f0b9bcc034ccc437df74006501	FMU.fmu	2017-23-01 13:26:13	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	42af21ebe1bbfbdc9f21be1fc8a2a9e2202ae7a5	FMU.fmu	2017-23-01 13:05:05	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	6f53770400e344c6928a2f13a2de291ac482f9d9	FMU.fmu	2017-23-01 10:28:50	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
---##	EXPORT	f484341a1c3d1269f4b93b970d16fecd15dd38bf	FMU.fmu	2017-23-01 10:27:33	c-code	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
 class HardwareInterface
 
 
 instance variables
     
   -- @ interface: type = input, name="RAT";
-  public RAT : RealPort := new RealPort(0.0);
+  public  RAT : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="RATSP";
-  public RATSP : RealPort := new RealPort(0.0);
+  public  RATSP : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="energy";
-  public energy : RealPort := new RealPort(0.0);
+  public  energy : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="lIn";
-  public lIn : RealPort := new RealPort(0.0);
+  public  lIn : RealPort := new RealPort(0.0);
 
 instance variables
 
   -- @ interface: type = output, name="valveOpen";
-  public valveOpen : RealPort := new RealPort(0.0);
+  public  valveOpen : RealPort := new RealPort(0.0);
   -- @ interface: type = output, name="fanSpeed";
-  public fanSpeed : RealPort := new RealPort(0.0);
+  public  fanSpeed : RealPort := new RealPort(0.0);
   
  values
  
   -- @ interface: type = parameter, name="controllerFrequency";
-  public controllerFrequency : RealPort = new RealPort(1000E6);
+  public  controllerFrequency : RealPort = new RealPort(1000E6);
  
   
 end HardwareInterface

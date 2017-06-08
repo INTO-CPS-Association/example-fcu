@@ -1,6 +1,6 @@
 {
     "algorithm": {},
-    "objectiveConstraints": {},
+    "objectiveConstraints": [],
     "objectiveDefinitions": {
         "externalScripts": {},
         "internalFunctions": {
@@ -68,7 +68,7 @@
             "averageTemperature": "+"
         }
     },
-    "scenarios":{},
+    "scenarios":[],
     "simulation": {
         "endTime": "6800",
         "startTime": "0"
