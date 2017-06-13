@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="double" version="4">
+  <OBJECT>
+    <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+    <PID name="Datatypes" mc="Standard.Package" uid="c8ad00d6-3162-4382-8429-bbb07a4b89f0"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">true</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[double]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

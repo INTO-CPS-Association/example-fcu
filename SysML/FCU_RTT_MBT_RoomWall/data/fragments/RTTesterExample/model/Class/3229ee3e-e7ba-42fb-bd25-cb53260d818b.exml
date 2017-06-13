@@ -1,0 +1,752 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Room" version="4">
+  <OBJECT>
+    <ID name="Room" mc="Standard.Class" uid="3229ee3e-e7ba-42fb-bd25-cb53260d818b"/>
+    <PID name="FCU_With_RoomWall_Model" mc="Standard.Package" uid="64536edf-b5f8-47c3-9b04-3ba9c95784b2"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Room]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="t" mc="Standard.Attribute" uid="023f767f-1bd0-42c7-823b-d922f6185d9b"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">true</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[t]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="timer" mc="Standard.DataType" uid="342f2186-ae91-4404-a593-353b39ddedae"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Standard.TaggedValue" uid="671b2f9c-fda1-4e61-9e9a-f223b16036a9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Standard.TagParameter" uid="699d0443-e35c-4718-b393-5ac98e303ee6"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[0.0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <REFOBJ>
+                      <ID name="MinimumValue" mc="Standard.TagType" uid="8c8fb9bd-4047-40da-94c8-b79c5ac8d072"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Standard.TaggedValue" uid="0d740f8a-17db-49cc-9bdc-8d1f0e48aeae"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Standard.TagParameter" uid="bba33d8b-ce1e-46c9-af5c-709d84b9bffb"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[20.0]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <REFOBJ>
+                      <ID name="MaximumValue" mc="Standard.TagType" uid="11621e89-536e-4eda-b139-341b6c7f128c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Standard.Note" uid="cf3c527e-67d3-43a1-9ad2-8d3b8c9acd48"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Standard.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="mdotwt" mc="Standard.Attribute" uid="3d54f47b-1957-4137-97da-d72ea11c6f1f"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.1]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[mdotwt]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="LWT" mc="Standard.Attribute" uid="ff1cb58a-2d97-44fa-8a9d-2c1a438d87aa"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[40.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[LWT]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="eps" mc="Standard.Attribute" uid="7aaf0e42-93bd-4f54-9910-4d29124b8dd4"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.4]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[eps]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="cWater" mc="Standard.Attribute" uid="9c1dbaf5-4dae-4c8b-8adf-4475bf88053c"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[4181.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[cWater]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Awall" mc="Standard.Attribute" uid="2d621592-10eb-4fba-b8dc-50dbc21ab9d1"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[60.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Awall]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="hAir" mc="Standard.Attribute" uid="046aff26-0e67-4cd8-9fd6-d501dfa1d328"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[4.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[hAir]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="mdotw" mc="Standard.Attribute" uid="3fb7c05d-7646-4423-8965-407b92a9c494"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[mdotw]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="EWT" mc="Standard.Attribute" uid="015ffd0e-719e-4e1b-b9e5-e17abe5c30c1"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[EWT]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Qin_dot" mc="Standard.Attribute" uid="4ce39ddd-8cab-4ff4-8a05-570a3f1dc63c"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Qin_dot]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Qout_dot" mc="Standard.Attribute" uid="a0bce603-afcf-4ca3-b68e-6ad3f61ccdd6"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Qout_dot]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="mdotat" mc="Standard.Attribute" uid="5870c300-d808-4581-a02e-03973e72f926"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.5]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[mdotat]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="mdota" mc="Standard.Attribute" uid="83af4199-9f4c-4351-9cb6-89aed13337cf"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[mdota]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SAT" mc="Standard.Attribute" uid="de322985-9ab2-484e-a336-59f74f99ceb1"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[SAT]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="rohAir" mc="Standard.Attribute" uid="2d67c02d-6874-4f6d-a151-efd2a894f3fa"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[1.204]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[rohAir]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="vAir" mc="Standard.Attribute" uid="2698c35d-583c-4ad4-ad4c-ad37067596b7"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[300.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[vAir]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="cAir" mc="Standard.Attribute" uid="3a3f609a-e827-42e7-981a-5eb1e703e6f8"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[1012.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[cAir]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="RATinit" mc="Standard.Attribute" uid="6c29e6eb-16c3-49ec-b201-3831811d90c8"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[16.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[RATinit]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="vo" mc="Standard.Attribute" uid="d868eef4-f9a0-4c29-b5c2-4c095c2216ca"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0001]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[vo]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="fs" mc="Standard.Attribute" uid="74b5f615-18a4-4da2-91d5-0118d1d4f16b"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0001]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[fs]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="DT" mc="Standard.Attribute" uid="1cce02be-ad9e-418c-94d4-78c3215448bb"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[DT]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="RAT_dot" mc="Standard.Attribute" uid="7658261c-0829-4256-a84e-3dcc28308918"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[RAT_dot]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+              <ID name="RESTRICTED" mc="Standard.Stereotype" uid="a3ddc420-5247-40a5-82ed-a31b65455595"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="totalEnergyOut" mc="Standard.Attribute" uid="25461d1a-cac4-4070-8a35-2cb62b10d23e"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[0.0]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[totalEnergyOut]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <ID name="double" mc="Standard.DataType" uid="31dafa5f-5922-4d24-8af2-7b1623335ee3"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="Variable" mc="Standard.Stereotype" uid="9370cbd9-c177-4594-b614-2e9ed4c3a439"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Standard.Note" uid="d4aea4c4-29cc-42e3-930f-c33fa154bc01"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Standard.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="roomModel" mc="Standard.StateMachine" uid="62a60ee9-2bb0-4f5a-861c-1787c207494d"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="Block" mc="Standard.Stereotype" uid="00bc42a4-0000-19c9-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

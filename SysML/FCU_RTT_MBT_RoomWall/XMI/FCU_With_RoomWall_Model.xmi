@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:INTOCPS="http:///schemas/INTOCPS/_uHhpgE9wEeeehZTFJChrqA/0" xmlns:RTTMBTProfile="http:///schemas/RTTMBTProfile/_uHX4gE9wEeeehZTFJChrqA/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sysml="http:///schemas/sysml/_uHragE9wEeeehZTFJChrqA/0" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/INTOCPS/_uHhpgE9wEeeehZTFJChrqA/0 INTOCPS.profile.xmi#_uIHfZ09wEeeehZTFJChrqA http:///schemas/RTTMBTProfile/_uHX4gE9wEeeehZTFJChrqA/0 RTTMBTProfile.profile.xmi#_uH-Vd09wEeeehZTFJChrqA http:///schemas/sysml/_uHragE9wEeeehZTFJChrqA/0 sysml.profile.xmi#_uIRQZ09wEeeehZTFJChrqA">
+  <uml:Model xmi:id="_uHOukE9wEeeehZTFJChrqA" name="FCU_With_RoomWall_Model">
+    <eAnnotations xmi:id="_uHOukU9wEeeehZTFJChrqA" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_uHOukk9wEeeehZTFJChrqA" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_uHOuk09wEeeehZTFJChrqA" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_uHOulE9wEeeehZTFJChrqA" name="Datatypes">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOulU9wEeeehZTFJChrqA" name="bool" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOulk9wEeeehZTFJChrqA" name="char" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOul09wEeeehZTFJChrqA" name="float" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOumE9wEeeehZTFJChrqA" name="int" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOumU9wEeeehZTFJChrqA" name="signed char" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOumk9wEeeehZTFJChrqA" name="signed int" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOum09wEeeehZTFJChrqA" name="timer" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOunE9wEeeehZTFJChrqA" name="unsigned char" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOunU9wEeeehZTFJChrqA" name="unsigned int" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOunk9wEeeehZTFJChrqA" name="void" isLeaf="true"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_uHOun09wEeeehZTFJChrqA" name="double" isLeaf="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOuoE9wEeeehZTFJChrqA" name="System">
+      <ownedAttribute xmi:id="_uHOuoU9wEeeehZTFJChrqA" name="SystemUnderTest" visibility="public" type="_uHOut09wEeeehZTFJChrqA" aggregation="composite" association="_uHOus09wEeeehZTFJChrqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOuok9wEeeehZTFJChrqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOuo09wEeeehZTFJChrqA" name="TestEnvironment" visibility="public" type="_uHOu0U9wEeeehZTFJChrqA" aggregation="composite" association="_uHOutU9wEeeehZTFJChrqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOupE9wEeeehZTFJChrqA"/>
+      </ownedAttribute>
+      <ownedConnector xmi:id="_uHOupU9wEeeehZTFJChrqA">
+        <end xmi:id="_uHOupk9wEeeehZTFJChrqA" isUnique="false" role="_uHOuuU9wEeeehZTFJChrqA" partWithPort="_uHOuoU9wEeeehZTFJChrqA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uHOup09wEeeehZTFJChrqA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOuqE9wEeeehZTFJChrqA"/>
+        </end>
+        <end xmi:id="_uHOuqU9wEeeehZTFJChrqA" isUnique="false" role="_uHOu009wEeeehZTFJChrqA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uHOuqk9wEeeehZTFJChrqA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOuq09wEeeehZTFJChrqA"/>
+        </end>
+      </ownedConnector>
+      <ownedConnector xmi:id="_uHOurE9wEeeehZTFJChrqA">
+        <end xmi:id="_uHOurU9wEeeehZTFJChrqA" isUnique="false" role="_uHOu0k9wEeeehZTFJChrqA" partWithPort="_uHOuo09wEeeehZTFJChrqA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uHOurk9wEeeehZTFJChrqA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOur09wEeeehZTFJChrqA"/>
+        </end>
+        <end xmi:id="_uHOusE9wEeeehZTFJChrqA" isUnique="false" role="_uHOuuE9wEeeehZTFJChrqA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uHOusU9wEeeehZTFJChrqA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOusk9wEeeehZTFJChrqA"/>
+        </end>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uHOus09wEeeehZTFJChrqA" memberEnd="_uHOuoU9wEeeehZTFJChrqA _uHOutE9wEeeehZTFJChrqA">
+      <ownedEnd xmi:id="_uHOutE9wEeeehZTFJChrqA" visibility="public" type="_uHOuoE9wEeeehZTFJChrqA" association="_uHOus09wEeeehZTFJChrqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uHOutU9wEeeehZTFJChrqA" memberEnd="_uHOuo09wEeeehZTFJChrqA _uHOutk9wEeeehZTFJChrqA">
+      <ownedEnd xmi:id="_uHOutk9wEeeehZTFJChrqA" visibility="public" type="_uHOuoE9wEeeehZTFJChrqA" association="_uHOutU9wEeeehZTFJChrqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOut09wEeeehZTFJChrqA" name="SystemUnderTest">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_uHOuuE9wEeeehZTFJChrqA" name="stimuli" type="_uHOvKk9wEeeehZTFJChrqA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_uHOuuU9wEeeehZTFJChrqA" name="observables" type="_uHOu2E9wEeeehZTFJChrqA"/>
+      <ownedAttribute xmi:id="_uHOuuk9wEeeehZTFJChrqA" name="fcuCTRL" visibility="public" type="_uHOu3E9wEeeehZTFJChrqA" aggregation="composite" association="_uHOuy09wEeeehZTFJChrqA"/>
+      <ownedAttribute xmi:id="_uHOuu09wEeeehZTFJChrqA" name="wall" visibility="public" type="_uHOvMU9wEeeehZTFJChrqA" aggregation="composite" association="_uHOuzU9wEeeehZTFJChrqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOuvE9wEeeehZTFJChrqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOuvU9wEeeehZTFJChrqA" name="room" visibility="public" type="_uHOvZk9wEeeehZTFJChrqA" aggregation="composite" association="_uHOuz09wEeeehZTFJChrqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOuvk9wEeeehZTFJChrqA"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOuv09wEeeehZTFJChrqA" name="fanSpeed" visibility="public" type="_uHOun09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOuwE9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOuwU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOuwk9wEeeehZTFJChrqA" name="valveOpen" visibility="public" type="_uHOun09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOuw09wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOuxE9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOuxU9wEeeehZTFJChrqA" name="Tisurf" visibility="public" type="_uHOun09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOuxk9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOux09wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOuyE9wEeeehZTFJChrqA" name="Tosurf" visibility="public" type="_uHOun09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOuyU9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOuyk9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uHOuy09wEeeehZTFJChrqA" memberEnd="_uHOuuk9wEeeehZTFJChrqA _uHOuzE9wEeeehZTFJChrqA">
+      <ownedEnd xmi:id="_uHOuzE9wEeeehZTFJChrqA" visibility="public" type="_uHOut09wEeeehZTFJChrqA" association="_uHOuy09wEeeehZTFJChrqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uHOuzU9wEeeehZTFJChrqA" memberEnd="_uHOuu09wEeeehZTFJChrqA _uHOuzk9wEeeehZTFJChrqA">
+      <ownedEnd xmi:id="_uHOuzk9wEeeehZTFJChrqA" visibility="public" type="_uHOut09wEeeehZTFJChrqA" association="_uHOuzU9wEeeehZTFJChrqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uHOuz09wEeeehZTFJChrqA" memberEnd="_uHOuvU9wEeeehZTFJChrqA _uHOu0E9wEeeehZTFJChrqA">
+      <ownedEnd xmi:id="_uHOu0E9wEeeehZTFJChrqA" visibility="public" type="_uHOut09wEeeehZTFJChrqA" association="_uHOuz09wEeeehZTFJChrqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOu0U9wEeeehZTFJChrqA" name="TestEnvironment" isActive="true">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_uHOu0k9wEeeehZTFJChrqA" name="stimuli" type="_uHOvKk9wEeeehZTFJChrqA"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_uHOu009wEeeehZTFJChrqA" name="observables" type="_uHOu2E9wEeeehZTFJChrqA"/>
+      <ownedAttribute xmi:id="_uHOu1E9wEeeehZTFJChrqA" name="tesim" visibility="public" type="_uHOvy09wEeeehZTFJChrqA" aggregation="composite" association="_uHOu1k9wEeeehZTFJChrqA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uHOu1U9wEeeehZTFJChrqA"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uHOu1k9wEeeehZTFJChrqA" memberEnd="_uHOu1E9wEeeehZTFJChrqA _uHOu109wEeeehZTFJChrqA">
+      <ownedEnd xmi:id="_uHOu109wEeeehZTFJChrqA" visibility="public" type="_uHOu0U9wEeeehZTFJChrqA" association="_uHOu1k9wEeeehZTFJChrqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_uHOu2E9wEeeehZTFJChrqA" name="Observables" isAbstract="true">
+      <ownedAttribute xmi:id="_uHOu2U9wEeeehZTFJChrqA" name="RAT_out" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <ownedComment xmi:id="_uHOu2k9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu209wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOu3E9wEeeehZTFJChrqA" name="fcuCTRL">
+      <ownedAttribute xmi:id="_uHOu3U9wEeeehZTFJChrqA" name="t" visibility="public" type="_uHOum09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOu3k9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu309wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu4E9wEeeehZTFJChrqA" name="K" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <ownedComment xmi:id="_uHOu4U9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu4k9wEeeehZTFJChrqA" symbol="50.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu409wEeeehZTFJChrqA" name="N" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu5E9wEeeehZTFJChrqA" symbol="10"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu5U9wEeeehZTFJChrqA" name="Td" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu5k9wEeeehZTFJChrqA" symbol="0.1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu509wEeeehZTFJChrqA" name="Ti" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu6E9wEeeehZTFJChrqA" symbol="5000"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu6U9wEeeehZTFJChrqA" name="b" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu6k9wEeeehZTFJChrqA" symbol="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu609wEeeehZTFJChrqA" name="c" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu7E9wEeeehZTFJChrqA" symbol="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu7U9wEeeehZTFJChrqA" name="sampletime" visibility="public" type="_uHOul09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu7k9wEeeehZTFJChrqA" symbol="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu709wEeeehZTFJChrqA" name="err" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu8E9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu8U9wEeeehZTFJChrqA" name="factor" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu8k9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu809wEeeehZTFJChrqA" name="uP" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu9E9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu9U9wEeeehZTFJChrqA" name="uI" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu9k9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu909wEeeehZTFJChrqA" name="uD" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu-E9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu-U9wEeeehZTFJChrqA" name="control" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu-k9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu-09wEeeehZTFJChrqA" name="preUI" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu_E9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu_U9wEeeehZTFJChrqA" name="preUD" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOu_k9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOu_09wEeeehZTFJChrqA" name="preUDin" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvAE9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvAU9wEeeehZTFJChrqA" name="uDin" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvAk9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvA09wEeeehZTFJChrqA" name="newRAT" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <ownedComment xmi:id="_uHOvBE9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvBU9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvBk9wEeeehZTFJChrqA" name="newRATSP" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <ownedComment xmi:id="_uHOvB09wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvCE9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_uHOvCU9wEeeehZTFJChrqA" name="fcuCTRL">
+        <ownedComment xmi:id="_uHOvCk9wEeeehZTFJChrqA">
+          <body>&lt;Enter note text here></body>
+        </ownedComment>
+        <region xmi:id="_uHOvC09wEeeehZTFJChrqA">
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvDE9wEeeehZTFJChrqA" name="Waiting">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvDU9wEeeehZTFJChrqA">
+              <body>t.reset();</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_uHOvDk9wEeeehZTFJChrqA" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvD09wEeeehZTFJChrqA" name="Setup">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvEE9wEeeehZTFJChrqA">
+              <body>K=50.0; N=10.0; Td=0.1; Ti=5000.0; b=1.0; c=1.0; sampletime=1.0;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvEU9wEeeehZTFJChrqA" name="PreUpdate">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvEk9wEeeehZTFJChrqA">
+              <body>factor=Td/(sampletime+(Td/N)); err=newRATSP-newRAT; uDin=(c*newRATSP-newRAT);</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvE09wEeeehZTFJChrqA" name="PIDUpdate">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvFE9wEeeehZTFJChrqA">
+              <body>uP=K*(b*newRATSP-newRAT); uD=factor*(preUD/N+K*(uDin-preUDin));</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvFU9wEeeehZTFJChrqA" name="PostUpdate">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvFk9wEeeehZTFJChrqA">
+              <body>preUDin=uDin;preUI=uI;preUD=uD;control=uD+uP+uI;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvF09wEeeehZTFJChrqA" name="InputUpdate">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvGE9wEeeehZTFJChrqA">
+              <body>newRAT=RAT_out; newRATSP=RATSP;</body>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_uHOvGU9wEeeehZTFJChrqA" name="Transition1" source="_uHOvDE9wEeeehZTFJChrqA" target="_uHOvF09wEeeehZTFJChrqA" guard="_uHOvGk9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvGk9wEeeehZTFJChrqA" name="t.elapsed(1000)" constrainedElement="_uHOvGU9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvG09wEeeehZTFJChrqA" value="t.elapsed(1000)"/>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_uHOvHE9wEeeehZTFJChrqA" name="Transition" source="_uHOvDk9wEeeehZTFJChrqA" target="_uHOvD09wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvHU9wEeeehZTFJChrqA" name="Transition" source="_uHOvD09wEeeehZTFJChrqA" target="_uHOvDE9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvHk9wEeeehZTFJChrqA" name="Transition" source="_uHOvEU9wEeeehZTFJChrqA" target="_uHOvE09wEeeehZTFJChrqA" guard="_uHOvH09wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvH09wEeeehZTFJChrqA" name="RATSP &lt;= 1" constrainedElement="_uHOvHk9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvIE9wEeeehZTFJChrqA" value="RATSP &lt;= 1"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvIU9wEeeehZTFJChrqA">
+              <body>uI=0;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvIk9wEeeehZTFJChrqA" name="Transition1" source="_uHOvEU9wEeeehZTFJChrqA" target="_uHOvE09wEeeehZTFJChrqA" guard="_uHOvI09wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvI09wEeeehZTFJChrqA" name="RATSP > 1" constrainedElement="_uHOvIk9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvJE9wEeeehZTFJChrqA" value="RATSP > 1"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvJU9wEeeehZTFJChrqA">
+              <body>uI=(preUI+sampletime*(K*err/Ti));</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvJk9wEeeehZTFJChrqA" name="Transition" source="_uHOvE09wEeeehZTFJChrqA" target="_uHOvFU9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvJ09wEeeehZTFJChrqA" name="Transition" source="_uHOvFU9wEeeehZTFJChrqA" target="_uHOvDE9wEeeehZTFJChrqA">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvKE9wEeeehZTFJChrqA">
+              <body>fanSpeed=control;valveOpen=control;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvKU9wEeeehZTFJChrqA" name="Transition" source="_uHOvF09wEeeehZTFJChrqA" target="_uHOvEU9wEeeehZTFJChrqA"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_uHOvKk9wEeeehZTFJChrqA" name="Stimuli" isAbstract="true">
+      <ownedAttribute xmi:id="_uHOvK09wEeeehZTFJChrqA" name="RATSP" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <ownedComment xmi:id="_uHOvLE9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvLU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvLk9wEeeehZTFJChrqA" name="OAT" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <ownedComment xmi:id="_uHOvL09wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvME9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOvMU9wEeeehZTFJChrqA" name="Wall">
+      <ownedAttribute xmi:id="_uHOvMk9wEeeehZTFJChrqA" name="t" visibility="public" type="_uHOum09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOvM09wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvNE9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvNU9wEeeehZTFJChrqA" name="rhoWall" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <ownedComment xmi:id="_uHOvNk9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvN09wEeeehZTFJChrqA" symbol="1312.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvOE9wEeeehZTFJChrqA" name="cWall" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false" isReadOnly="true">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvOU9wEeeehZTFJChrqA" symbol="1360.71"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvOk9wEeeehZTFJChrqA" name="lambda_Wall" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvO09wEeeehZTFJChrqA" symbol="0.1192"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvPE9wEeeehZTFJChrqA" name="lWall" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvPU9wEeeehZTFJChrqA" symbol="0.03"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvPk9wEeeehZTFJChrqA" name="aWall" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvP09wEeeehZTFJChrqA" symbol="60.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvQE9wEeeehZTFJChrqA" name="hi" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvQU9wEeeehZTFJChrqA" symbol="8.33"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvQk9wEeeehZTFJChrqA" name="ho" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvQ09wEeeehZTFJChrqA" symbol="33.33"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvRE9wEeeehZTFJChrqA" name="TisurfInit" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvRU9wEeeehZTFJChrqA" symbol="16.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvRk9wEeeehZTFJChrqA" name="TosurfInit" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvR09wEeeehZTFJChrqA" symbol="10.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvSE9wEeeehZTFJChrqA" name="Tosurf_dot" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvSU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvSk9wEeeehZTFJChrqA" name="Tisurf_dot" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvS09wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvTE9wEeeehZTFJChrqA" name="R" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvTU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvTk9wEeeehZTFJChrqA" name="C" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvT09wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_uHOvUE9wEeeehZTFJChrqA" name="wallModel">
+        <ownedComment xmi:id="_uHOvUU9wEeeehZTFJChrqA">
+          <body>&lt;Enter note text here></body>
+        </ownedComment>
+        <region xmi:id="_uHOvUk9wEeeehZTFJChrqA">
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvU09wEeeehZTFJChrqA" name="Waiting">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvVE9wEeeehZTFJChrqA">
+              <body>t.reset();</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_uHOvVU9wEeeehZTFJChrqA" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvVk9wEeeehZTFJChrqA" name="Setup">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvV09wEeeehZTFJChrqA">
+              <body>rhoWall = 1312.0; cWall = 1360.71; lambda_Wall = 0.1; lWall = 0.03; aWall = 60.0; hi = 8.33; ho = 33.33; TisurfInit = 16.0; TosurfInit = 10.0;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvWE9wEeeehZTFJChrqA" name="derivativeUpdate">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvWU9wEeeehZTFJChrqA">
+              <body>Tisurf_dot = ((hi * aWall * (RAT_out - Tisurf) + (Tosurf - Tisurf) / R) / C); Tosurf_dot = ((ho * aWall * (OAT - Tosurf) + (Tisurf - Tosurf) / R) / C);</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvWk9wEeeehZTFJChrqA" name="PreCalc">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvW09wEeeehZTFJChrqA">
+              <body>R = lWall / (lambda_Wall * aWall); C = rhoWall * cWall * lWall * aWall / 2.0; Tisurf = TisurfInit; Tosurf = TosurfInit;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvXE9wEeeehZTFJChrqA" name="PostUpdate">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvXU9wEeeehZTFJChrqA">
+              <body>Tisurf = Tisurf + Tisurf_dot * 1; Tosurf = Tosurf + Tosurf_dot * 1;</body>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_uHOvXk9wEeeehZTFJChrqA" name="Transition1" source="_uHOvU09wEeeehZTFJChrqA" target="_uHOvWE9wEeeehZTFJChrqA" guard="_uHOvX09wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvX09wEeeehZTFJChrqA" name="t.elapsed(1000)" constrainedElement="_uHOvXk9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvYE9wEeeehZTFJChrqA" value="t.elapsed(1000)"/>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_uHOvYU9wEeeehZTFJChrqA" name="Transition" source="_uHOvVU9wEeeehZTFJChrqA" target="_uHOvVk9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvYk9wEeeehZTFJChrqA" name="Transition1" source="_uHOvVk9wEeeehZTFJChrqA" target="_uHOvWk9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvY09wEeeehZTFJChrqA" name="Transition" source="_uHOvWE9wEeeehZTFJChrqA" target="_uHOvXE9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvZE9wEeeehZTFJChrqA" name="Transition" source="_uHOvWk9wEeeehZTFJChrqA" target="_uHOvU09wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvZU9wEeeehZTFJChrqA" name="Transition" source="_uHOvXE9wEeeehZTFJChrqA" target="_uHOvU09wEeeehZTFJChrqA"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOvZk9wEeeehZTFJChrqA" name="Room">
+      <ownedAttribute xmi:id="_uHOvZ09wEeeehZTFJChrqA" name="t" visibility="public" type="_uHOum09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOvaE9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvaU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvak9wEeeehZTFJChrqA" name="mdotwt" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOva09wEeeehZTFJChrqA" symbol="0.1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvbE9wEeeehZTFJChrqA" name="LWT" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvbU9wEeeehZTFJChrqA" symbol="40.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvbk9wEeeehZTFJChrqA" name="eps" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvb09wEeeehZTFJChrqA" symbol="0.4"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvcE9wEeeehZTFJChrqA" name="cWater" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvcU9wEeeehZTFJChrqA" symbol="4181.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvck9wEeeehZTFJChrqA" name="Awall" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvc09wEeeehZTFJChrqA" symbol="60.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvdE9wEeeehZTFJChrqA" name="hAir" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvdU9wEeeehZTFJChrqA" symbol="4.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvdk9wEeeehZTFJChrqA" name="mdotw" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvd09wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOveE9wEeeehZTFJChrqA" name="EWT" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOveU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvek9wEeeehZTFJChrqA" name="Qin_dot" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOve09wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvfE9wEeeehZTFJChrqA" name="Qout_dot" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvfU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvfk9wEeeehZTFJChrqA" name="mdotat" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvf09wEeeehZTFJChrqA" symbol="0.5"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvgE9wEeeehZTFJChrqA" name="mdota" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvgU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvgk9wEeeehZTFJChrqA" name="SAT" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvg09wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvhE9wEeeehZTFJChrqA" name="rohAir" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvhU9wEeeehZTFJChrqA" symbol="1.204"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvhk9wEeeehZTFJChrqA" name="vAir" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvh09wEeeehZTFJChrqA" symbol="300.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOviE9wEeeehZTFJChrqA" name="cAir" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOviU9wEeeehZTFJChrqA" symbol="1012.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvik9wEeeehZTFJChrqA" name="RATinit" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvi09wEeeehZTFJChrqA" symbol="16.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvjE9wEeeehZTFJChrqA" name="vo" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvjU9wEeeehZTFJChrqA" symbol="0.0001"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvjk9wEeeehZTFJChrqA" name="fs" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvj09wEeeehZTFJChrqA" symbol="0.0001"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvkE9wEeeehZTFJChrqA" name="DT" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvkU9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvkk9wEeeehZTFJChrqA" name="RAT_dot" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvk09wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvlE9wEeeehZTFJChrqA" name="totalEnergyOut" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <ownedComment xmi:id="_uHOvlU9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvlk9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_uHOvl09wEeeehZTFJChrqA" name="roomModel">
+        <ownedComment xmi:id="_uHOvmE9wEeeehZTFJChrqA">
+          <body>&lt;Enter note text here></body>
+        </ownedComment>
+        <region xmi:id="_uHOvmU9wEeeehZTFJChrqA">
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvmk9wEeeehZTFJChrqA" name="Waiting">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvm09wEeeehZTFJChrqA">
+              <body>t.reset();</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_uHOvnE9wEeeehZTFJChrqA" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvnU9wEeeehZTFJChrqA" name="Setup">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvnk9wEeeehZTFJChrqA">
+              <body>mdotwt=0.1;LWT=40.0;eps=0.4;cWater=4181.0;Awall=60.0;hAir=4.0;mdotat=0.5;rohAir=1.204;vAir=300.0;cAir=1012.0;RATinit=16.0;vo=0.0001;fs=0.0001;DT=0;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvn09wEeeehZTFJChrqA" name="PreUpdate"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvoE9wEeeehZTFJChrqA" name="voS"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvoU9wEeeehZTFJChrqA" name="Qin">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvok9wEeeehZTFJChrqA">
+              <body>Qin_dot=eps*mdotat*fs*cAir*(LWT-RAT_out);Qout_dot=hAir*Awall*(RAT_out-Tisurf);</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvo09wEeeehZTFJChrqA" name="DT">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvpE9wEeeehZTFJChrqA">
+              <body>DT=Qin_dot-Qout_dot;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvpU9wEeeehZTFJChrqA" name="RAT">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvpk9wEeeehZTFJChrqA">
+              <body>RAT_dot=DT/(rohAir*cAir*vAir);</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvp09wEeeehZTFJChrqA" name="CalcOutput">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvqE9wEeeehZTFJChrqA">
+              <body>mdota=fs*mdotat;mdotw=vo*mdotwt;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvqU9wEeeehZTFJChrqA" name="UpdateByEuler">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvqk9wEeeehZTFJChrqA">
+              <body>totalEnergyOut=totalEnergyOut+Qin_dot*1;RAT_out=RAT_out+RAT_dot*1;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvq09wEeeehZTFJChrqA" name="PreCalc">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvrE9wEeeehZTFJChrqA">
+              <body>RAT_out=RATinit;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOvrU9wEeeehZTFJChrqA" name="CalcOutput1">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvrk9wEeeehZTFJChrqA">
+              <body>EWT=LWT-(Qin_dot/(vo*mdotwt*cWater));SAT=(Qin_dot/(mdota*cAir))+RAT_out;</body>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_uHOvr09wEeeehZTFJChrqA" name="Transition1" source="_uHOvmk9wEeeehZTFJChrqA" target="_uHOvn09wEeeehZTFJChrqA" guard="_uHOvsE9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvsE9wEeeehZTFJChrqA" name="t.elapsed(1000)" constrainedElement="_uHOvr09wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvsU9wEeeehZTFJChrqA" value="t.elapsed(1000)"/>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_uHOvsk9wEeeehZTFJChrqA" name="Transition" source="_uHOvnE9wEeeehZTFJChrqA" target="_uHOvnU9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvs09wEeeehZTFJChrqA" name="Transition" source="_uHOvnU9wEeeehZTFJChrqA" target="_uHOvq09wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvtE9wEeeehZTFJChrqA" name="Transition1" source="_uHOvn09wEeeehZTFJChrqA" target="_uHOvoE9wEeeehZTFJChrqA" guard="_uHOvtU9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvtU9wEeeehZTFJChrqA" name="fanSpeed > 0" constrainedElement="_uHOvtE9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvtk9wEeeehZTFJChrqA" value="fanSpeed > 0"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvt09wEeeehZTFJChrqA">
+              <body>fs=fanSpeed;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvuE9wEeeehZTFJChrqA" name="Transition2" source="_uHOvn09wEeeehZTFJChrqA" target="_uHOvoE9wEeeehZTFJChrqA" guard="_uHOvuU9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvuU9wEeeehZTFJChrqA" name="fanSpeed &lt;= 0" constrainedElement="_uHOvuE9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvuk9wEeeehZTFJChrqA" value="fanSpeed &lt;= 0"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvu09wEeeehZTFJChrqA">
+              <body>fs=0.0001;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvvE9wEeeehZTFJChrqA" name="Transition" source="_uHOvoE9wEeeehZTFJChrqA" target="_uHOvoU9wEeeehZTFJChrqA" guard="_uHOvvU9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvvU9wEeeehZTFJChrqA" name="valveOpen>0" constrainedElement="_uHOvvE9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvvk9wEeeehZTFJChrqA" value="valveOpen>0"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvv09wEeeehZTFJChrqA">
+              <body>vo=valveOpen;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvwE9wEeeehZTFJChrqA" name="Transition1" source="_uHOvoE9wEeeehZTFJChrqA" target="_uHOvoU9wEeeehZTFJChrqA" guard="_uHOvwU9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOvwU9wEeeehZTFJChrqA" name="valveOpen&lt;=0" constrainedElement="_uHOvwE9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOvwk9wEeeehZTFJChrqA" value="valveOpen&lt;=0"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOvw09wEeeehZTFJChrqA">
+              <body>vo=0.0001;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOvxE9wEeeehZTFJChrqA" name="Transition" source="_uHOvoU9wEeeehZTFJChrqA" target="_uHOvo09wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvxU9wEeeehZTFJChrqA" name="Transition" source="_uHOvo09wEeeehZTFJChrqA" target="_uHOvpU9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvxk9wEeeehZTFJChrqA" name="Transition" source="_uHOvpU9wEeeehZTFJChrqA" target="_uHOvp09wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvx09wEeeehZTFJChrqA" name="Transition" source="_uHOvp09wEeeehZTFJChrqA" target="_uHOvrU9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvyE9wEeeehZTFJChrqA" name="Transition" source="_uHOvqU9wEeeehZTFJChrqA" target="_uHOvmk9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvyU9wEeeehZTFJChrqA" name="Transition1" source="_uHOvq09wEeeehZTFJChrqA" target="_uHOvmk9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOvyk9wEeeehZTFJChrqA" name="Transition" source="_uHOvrU9wEeeehZTFJChrqA" target="_uHOvqU9wEeeehZTFJChrqA"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uHOvy09wEeeehZTFJChrqA" name="TESim">
+      <ownedAttribute xmi:id="_uHOvzE9wEeeehZTFJChrqA" name="t" visibility="public" type="_uHOum09wEeeehZTFJChrqA">
+        <ownedComment xmi:id="_uHOvzU9wEeeehZTFJChrqA">
+          <body></body>
+        </ownedComment>
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOvzk9wEeeehZTFJChrqA" symbol="0.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOvz09wEeeehZTFJChrqA" name="temp" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOv0E9wEeeehZTFJChrqA" symbol="0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uHOv0U9wEeeehZTFJChrqA" name="b" visibility="public" type="_uHOun09wEeeehZTFJChrqA" isUnique="false">
+        <defaultValue xmi:type="uml:Expression" xmi:id="_uHOv0k9wEeeehZTFJChrqA" symbol="1.0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_uHOv009wEeeehZTFJChrqA" name="TESim State Machine">
+        <region xmi:id="_uHOv1E9wEeeehZTFJChrqA">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_uHOv1U9wEeeehZTFJChrqA" name="Initial State"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOv1k9wEeeehZTFJChrqA" name="Waiting">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOv109wEeeehZTFJChrqA">
+              <body>t.reset();temp=temp+1;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOv2E9wEeeehZTFJChrqA" name="Processing"/>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOv2U9wEeeehZTFJChrqA" name="Init">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOv2k9wEeeehZTFJChrqA">
+              <body>RATSP=21;OAT=15;b=1.0;</body>
+            </entry>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_uHOv209wEeeehZTFJChrqA" name="AddRATSP">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_uHOv3E9wEeeehZTFJChrqA">
+              <body>RATSP=RATSP+((temp/50)*b);OAT=OAT-((temp/1000)*b);</body>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_uHOv3U9wEeeehZTFJChrqA" name="Transition" source="_uHOv1U9wEeeehZTFJChrqA" target="_uHOv2U9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOv3k9wEeeehZTFJChrqA" name="Transition" source="_uHOv1k9wEeeehZTFJChrqA" target="_uHOv2E9wEeeehZTFJChrqA" guard="_uHOv309wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOv309wEeeehZTFJChrqA" name="t.elapsed(10000)" constrainedElement="_uHOv3k9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOv4E9wEeeehZTFJChrqA" value="t.elapsed(10000)"/>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_uHOv4U9wEeeehZTFJChrqA" name="Transition1" source="_uHOv2E9wEeeehZTFJChrqA" target="_uHOv209wEeeehZTFJChrqA" guard="_uHOv4k9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOv4k9wEeeehZTFJChrqA" name="RATSP >=28" constrainedElement="_uHOv4U9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOv409wEeeehZTFJChrqA" value="RATSP >=28"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOv5E9wEeeehZTFJChrqA">
+              <body>b=-1.0;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOv5U9wEeeehZTFJChrqA" name="Transition2" source="_uHOv2E9wEeeehZTFJChrqA" target="_uHOv209wEeeehZTFJChrqA" guard="_uHOv5k9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOv5k9wEeeehZTFJChrqA" name="RATSP&lt;=12" constrainedElement="_uHOv5U9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOv509wEeeehZTFJChrqA" value="RATSP&lt;=12"/>
+            </ownedRule>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_uHOv6E9wEeeehZTFJChrqA">
+              <body>b=1.0;</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_uHOv6U9wEeeehZTFJChrqA" name="Transition" source="_uHOv2E9wEeeehZTFJChrqA" target="_uHOv209wEeeehZTFJChrqA" guard="_uHOv6k9wEeeehZTFJChrqA">
+            <ownedRule xmi:id="_uHOv6k9wEeeehZTFJChrqA" name="(RATSP>12) &amp;&amp; (RATSP &lt; 28)" constrainedElement="_uHOv6U9wEeeehZTFJChrqA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_uHOv609wEeeehZTFJChrqA" value="(RATSP>12) &amp;&amp; (RATSP &lt; 28)"/>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_uHOv7E9wEeeehZTFJChrqA" name="Transition" source="_uHOv2U9wEeeehZTFJChrqA" target="_uHOv1k9wEeeehZTFJChrqA"/>
+          <transition xmi:id="_uHOv7U9wEeeehZTFJChrqA" name="Transition" source="_uHOv209wEeeehZTFJChrqA" target="_uHOv1k9wEeeehZTFJChrqA"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <profileApplication xmi:id="_uIbBYE9wEeeehZTFJChrqA">
+      <eAnnotations xmi:id="_uIbBYU9wEeeehZTFJChrqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="RTTMBTProfile.profile.xmi#_uH-Vd09wEeeehZTFJChrqA"/>
+      </eAnnotations>
+      <appliedProfile href="RTTMBTProfile.profile.xmi#_uH-VcE9wEeeehZTFJChrqA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_uIkLUE9wEeeehZTFJChrqA">
+      <eAnnotations xmi:id="_uIkLUU9wEeeehZTFJChrqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="INTOCPS.profile.xmi#_uIHfZ09wEeeehZTFJChrqA"/>
+      </eAnnotations>
+      <appliedProfile href="INTOCPS.profile.xmi#_uIHfYE9wEeeehZTFJChrqA"/>
+    </profileApplication>
+    <profileApplication xmi:id="_uIkLUk9wEeeehZTFJChrqA">
+      <eAnnotations xmi:id="_uIkLU09wEeeehZTFJChrqA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="sysml.profile.xmi#_uIRQZ09wEeeehZTFJChrqA"/>
+      </eAnnotations>
+      <appliedProfile href="sysml.profile.xmi#_uIRQYE9wEeeehZTFJChrqA"/>
+    </profileApplication>
+  </uml:Model>
+  <RTTMBTProfile:DATATYPES xmi:id="_uIt8UE9wEeeehZTFJChrqA" base_Package="_uHOulE9wEeeehZTFJChrqA"/>
+  <sysml:Block xmi:id="_uIt8UU9wEeeehZTFJChrqA" base_Class="_uHOuoE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:SYSTEM xmi:id="_uIt8Uk9wEeeehZTFJChrqA" base_Class="_uHOuoE9wEeeehZTFJChrqA"/>
+  <INTOCPS:BlockInstance xmi:id="_uIt8U09wEeeehZTFJChrqA" base_Property="_uHOuoU9wEeeehZTFJChrqA"/>
+  <INTOCPS:FlowPort xmi:id="_uIt8VE9wEeeehZTFJChrqA" base_Port="_uHOuuE9wEeeehZTFJChrqA"/>
+  <INTOCPS:FlowPort xmi:id="_uIt8VU9wEeeehZTFJChrqA" base_Port="_uHOuuU9wEeeehZTFJChrqA"/>
+  <INTOCPS:BlockInstance xmi:id="_uIt8Vk9wEeeehZTFJChrqA" base_Property="_uHOuo09wEeeehZTFJChrqA"/>
+  <INTOCPS:FlowPort xmi:id="_uIt8V09wEeeehZTFJChrqA" base_Port="_uHOu0k9wEeeehZTFJChrqA"/>
+  <INTOCPS:FlowPort xmi:id="_uIt8WE9wEeeehZTFJChrqA" base_Port="_uHOu009wEeeehZTFJChrqA"/>
+  <sysml:Block xmi:id="_uIt8WU9wEeeehZTFJChrqA" base_Class="_uHOut09wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:SUT xmi:id="_uIt8Wk9wEeeehZTFJChrqA" base_Class="_uHOut09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8W09wEeeehZTFJChrqA" base_Property="_uHOuv09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8XE9wEeeehZTFJChrqA" base_Property="_uHOuwk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8XU9wEeeehZTFJChrqA" base_Property="_uHOuxU9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8Xk9wEeeehZTFJChrqA" base_Property="_uHOuyE9wEeeehZTFJChrqA"/>
+  <sysml:Block xmi:id="_uIt8X09wEeeehZTFJChrqA" base_Class="_uHOu0U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:TE xmi:id="_uIt8YE9wEeeehZTFJChrqA" base_Class="_uHOu0U9wEeeehZTFJChrqA"/>
+  <INTOCPS:StrtType xmi:id="_uIt8YU9wEeeehZTFJChrqA" base_Interface="_uHOu2E9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:SUT2TE xmi:id="_uIt8Yk9wEeeehZTFJChrqA" base_Interface="_uHOu2E9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8Y09wEeeehZTFJChrqA" base_Property="_uHOu2U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uIt8ZE9wEeeehZTFJChrqA" base_Property="_uHOu2U9wEeeehZTFJChrqA" MinimumValue="-20" MaximumValue="50"/>
+  <sysml:Block xmi:id="_uIt8ZU9wEeeehZTFJChrqA" base_Class="_uHOu3E9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8Zk9wEeeehZTFJChrqA" base_Property="_uHOu3U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8Z09wEeeehZTFJChrqA" base_Property="_uHOu4E9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8aE9wEeeehZTFJChrqA" base_Property="_uHOu409wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8aU9wEeeehZTFJChrqA" base_Property="_uHOu5U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8ak9wEeeehZTFJChrqA" base_Property="_uHOu509wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8a09wEeeehZTFJChrqA" base_Property="_uHOu6U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8bE9wEeeehZTFJChrqA" base_Property="_uHOu609wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8bU9wEeeehZTFJChrqA" base_Property="_uHOu7U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8bk9wEeeehZTFJChrqA" base_Property="_uHOu709wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uIt8b09wEeeehZTFJChrqA" base_Property="_uHOu709wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uIt8cE9wEeeehZTFJChrqA" base_Property="_uHOu8U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tUE9wEeeehZTFJChrqA" base_Property="_uHOu8U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tUU9wEeeehZTFJChrqA" base_Property="_uHOu809wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tUk9wEeeehZTFJChrqA" base_Property="_uHOu809wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tU09wEeeehZTFJChrqA" base_Property="_uHOu9U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tVE9wEeeehZTFJChrqA" base_Property="_uHOu9U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tVU9wEeeehZTFJChrqA" base_Property="_uHOu909wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tVk9wEeeehZTFJChrqA" base_Property="_uHOu909wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tV09wEeeehZTFJChrqA" base_Property="_uHOu-U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tWE9wEeeehZTFJChrqA" base_Property="_uHOu-U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tWU9wEeeehZTFJChrqA" base_Property="_uHOu-09wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tWk9wEeeehZTFJChrqA" base_Property="_uHOu-09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tW09wEeeehZTFJChrqA" base_Property="_uHOu_U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tXE9wEeeehZTFJChrqA" base_Property="_uHOu_U9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tXU9wEeeehZTFJChrqA" base_Property="_uHOu_09wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tXk9wEeeehZTFJChrqA" base_Property="_uHOu_09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tX09wEeeehZTFJChrqA" base_Property="_uHOvAU9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tYE9wEeeehZTFJChrqA" base_Property="_uHOvAU9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tYU9wEeeehZTFJChrqA" base_Property="_uHOvA09wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tYk9wEeeehZTFJChrqA" base_Property="_uHOvA09wEeeehZTFJChrqA" MinimumValue="-20" MaximumValue="50"/>
+  <INTOCPS:Variable xmi:id="_uI3tY09wEeeehZTFJChrqA" base_Property="_uHOvBk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tZE9wEeeehZTFJChrqA" base_Property="_uHOvBk9wEeeehZTFJChrqA" MinimumValue="0" MaximumValue="30"/>
+  <RTTMBTProfile:TE2SUT xmi:id="_uI3tZU9wEeeehZTFJChrqA" base_Interface="_uHOvKk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tZk9wEeeehZTFJChrqA" base_Property="_uHOvK09wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tZ09wEeeehZTFJChrqA" base_Property="_uHOvK09wEeeehZTFJChrqA" MinimumValue="-20.0" MaximumValue="50.0"/>
+  <INTOCPS:Variable xmi:id="_uI3taE9wEeeehZTFJChrqA" base_Property="_uHOvLk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3taU9wEeeehZTFJChrqA" base_Property="_uHOvLk9wEeeehZTFJChrqA" MinimumValue="-20.0" MaximumValue="50.0"/>
+  <sysml:Block xmi:id="_uI3tak9wEeeehZTFJChrqA" base_Class="_uHOvMU9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3ta09wEeeehZTFJChrqA" base_Property="_uHOvMk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tbE9wEeeehZTFJChrqA" base_Property="_uHOvNU9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tbU9wEeeehZTFJChrqA" base_Property="_uHOvOE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tbk9wEeeehZTFJChrqA" base_Property="_uHOvOk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tb09wEeeehZTFJChrqA" base_Property="_uHOvOk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tcE9wEeeehZTFJChrqA" base_Property="_uHOvPE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tcU9wEeeehZTFJChrqA" base_Property="_uHOvPE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tck9wEeeehZTFJChrqA" base_Property="_uHOvPk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tc09wEeeehZTFJChrqA" base_Property="_uHOvPk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tdE9wEeeehZTFJChrqA" base_Property="_uHOvQE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tdU9wEeeehZTFJChrqA" base_Property="_uHOvQE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tdk9wEeeehZTFJChrqA" base_Property="_uHOvQk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3td09wEeeehZTFJChrqA" base_Property="_uHOvQk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3teE9wEeeehZTFJChrqA" base_Property="_uHOvRE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3teU9wEeeehZTFJChrqA" base_Property="_uHOvRE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tek9wEeeehZTFJChrqA" base_Property="_uHOvRk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3te09wEeeehZTFJChrqA" base_Property="_uHOvRk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tfE9wEeeehZTFJChrqA" base_Property="_uHOvSE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tfU9wEeeehZTFJChrqA" base_Property="_uHOvSE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tfk9wEeeehZTFJChrqA" base_Property="_uHOvSk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tf09wEeeehZTFJChrqA" base_Property="_uHOvSk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tgE9wEeeehZTFJChrqA" base_Property="_uHOvTE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tgU9wEeeehZTFJChrqA" base_Property="_uHOvTE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tgk9wEeeehZTFJChrqA" base_Property="_uHOvTk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tg09wEeeehZTFJChrqA" base_Property="_uHOvTk9wEeeehZTFJChrqA"/>
+  <sysml:Block xmi:id="_uI3thE9wEeeehZTFJChrqA" base_Class="_uHOvZk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3thU9wEeeehZTFJChrqA" base_Property="_uHOvZ09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3thk9wEeeehZTFJChrqA" base_Property="_uHOvak9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3th09wEeeehZTFJChrqA" base_Property="_uHOvak9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tiE9wEeeehZTFJChrqA" base_Property="_uHOvbE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tiU9wEeeehZTFJChrqA" base_Property="_uHOvbE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tik9wEeeehZTFJChrqA" base_Property="_uHOvbk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3ti09wEeeehZTFJChrqA" base_Property="_uHOvbk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tjE9wEeeehZTFJChrqA" base_Property="_uHOvcE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tjU9wEeeehZTFJChrqA" base_Property="_uHOvcE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tjk9wEeeehZTFJChrqA" base_Property="_uHOvck9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tj09wEeeehZTFJChrqA" base_Property="_uHOvck9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tkE9wEeeehZTFJChrqA" base_Property="_uHOvdE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uI3tkU9wEeeehZTFJChrqA" base_Property="_uHOvdE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uI3tkk9wEeeehZTFJChrqA" base_Property="_uHOvdk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3QE9wEeeehZTFJChrqA" base_Property="_uHOvdk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3QU9wEeeehZTFJChrqA" base_Property="_uHOveE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Qk9wEeeehZTFJChrqA" base_Property="_uHOveE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3Q09wEeeehZTFJChrqA" base_Property="_uHOvek9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3RE9wEeeehZTFJChrqA" base_Property="_uHOvek9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3RU9wEeeehZTFJChrqA" base_Property="_uHOvfE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Rk9wEeeehZTFJChrqA" base_Property="_uHOvfE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3R09wEeeehZTFJChrqA" base_Property="_uHOvfk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3SE9wEeeehZTFJChrqA" base_Property="_uHOvfk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3SU9wEeeehZTFJChrqA" base_Property="_uHOvgE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Sk9wEeeehZTFJChrqA" base_Property="_uHOvgE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3S09wEeeehZTFJChrqA" base_Property="_uHOvgk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3TE9wEeeehZTFJChrqA" base_Property="_uHOvgk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3TU9wEeeehZTFJChrqA" base_Property="_uHOvhE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Tk9wEeeehZTFJChrqA" base_Property="_uHOvhE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3T09wEeeehZTFJChrqA" base_Property="_uHOvhk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3UE9wEeeehZTFJChrqA" base_Property="_uHOvhk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3UU9wEeeehZTFJChrqA" base_Property="_uHOviE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Uk9wEeeehZTFJChrqA" base_Property="_uHOviE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3U09wEeeehZTFJChrqA" base_Property="_uHOvik9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3VE9wEeeehZTFJChrqA" base_Property="_uHOvik9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3VU9wEeeehZTFJChrqA" base_Property="_uHOvjE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Vk9wEeeehZTFJChrqA" base_Property="_uHOvjE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3V09wEeeehZTFJChrqA" base_Property="_uHOvjk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3WE9wEeeehZTFJChrqA" base_Property="_uHOvjk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3WU9wEeeehZTFJChrqA" base_Property="_uHOvkE9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Wk9wEeeehZTFJChrqA" base_Property="_uHOvkE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3W09wEeeehZTFJChrqA" base_Property="_uHOvkk9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3XE9wEeeehZTFJChrqA" base_Property="_uHOvkk9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3XU9wEeeehZTFJChrqA" base_Property="_uHOvlE9wEeeehZTFJChrqA"/>
+  <sysml:Block xmi:id="_uJA3Xk9wEeeehZTFJChrqA" base_Class="_uHOvy09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3X09wEeeehZTFJChrqA" base_Property="_uHOvzE9wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3YE9wEeeehZTFJChrqA" base_Property="_uHOvz09wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3YU9wEeeehZTFJChrqA" base_Property="_uHOvz09wEeeehZTFJChrqA"/>
+  <INTOCPS:Variable xmi:id="_uJA3Yk9wEeeehZTFJChrqA" base_Property="_uHOv0U9wEeeehZTFJChrqA"/>
+  <RTTMBTProfile:RESTRICTED xmi:id="_uJA3Y09wEeeehZTFJChrqA" base_Property="_uHOv0U9wEeeehZTFJChrqA"/>
+</xmi:XMI>

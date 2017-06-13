@@ -1,0 +1,302 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="wallModel" version="4">
+  <OBJECT>
+    <ID name="wallModel" mc="Standard.StateMachine" uid="4be3fbf2-1d69-4c7f-9aa7-f8031c9b4d1a"/>
+    <PID name="Wall" mc="Standard.Class" uid="61b16680-c1ce-4e02-a8ab-8ff8f86d3077"/>
+    <ATTRIBUTES>
+      <ATT name="Kind">Dynamic</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[wallModel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Top">
+        <OBJECT>
+          <ID name="" mc="Standard.Region" uid="3cfdc0c2-5742-4d19-aef2-96db3ce28742"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Sub">
+              <OBJECT>
+                <ID name="Waiting" mc="Standard.State" uid="15e8dc36-61d3-4859-8c5f-fe0f7b75c814"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Waiting]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="Standard.InternalTransition" uid="8f0ec86c-bc21-47ce-ac20-3930357fae43"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"><![CDATA[t.reset();]]></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Entry]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition1" mc="Standard.Transition" uid="bc3989da-413e-4cf2-956a-daa75f67f51d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[t.elapsed(1000)]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="derivativeUpdate" mc="Standard.State" uid="db38762e-4bc3-4d14-b8a1-fd7bd496426b"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Initial" mc="Standard.InitialPseudoState" uid="64fa5440-3666-4df1-8545-2d880525c741"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Initial]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Standard.Transition" uid="a90aef1b-dd16-4182-b456-6f4c6f0783c3"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Setup" mc="Standard.State" uid="e3bc70c5-09e0-4897-a8de-04fe276cebd7"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Setup" mc="Standard.State" uid="e3bc70c5-09e0-4897-a8de-04fe276cebd7"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Setup]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="Standard.InternalTransition" uid="29473a31-e63b-4e52-9411-f6acaff1400c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"><![CDATA[rhoWall = 1312.0; cWall = 1360.71; lambda_Wall = 0.1; lWall = 0.03; aWall = 60.0; hi = 8.33; ho = 33.33; TisurfInit = 16.0; TosurfInit = 10.0;]]></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Entry]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition1" mc="Standard.Transition" uid="16e9d72c-d0bb-4335-9e3a-1c8840f80b05"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="PreCalc" mc="Standard.State" uid="f36d2925-9b02-4d0e-846e-bee997346b86"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="derivativeUpdate" mc="Standard.State" uid="db38762e-4bc3-4d14-b8a1-fd7bd496426b"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[derivativeUpdate]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="Standard.InternalTransition" uid="ea77a603-eeb6-4ce2-ae61-8f97280adb9a"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"><![CDATA[Tisurf_dot = ((hi * aWall * (RAT_out - Tisurf) + (Tosurf - Tisurf) / R) / C); Tosurf_dot = ((ho * aWall * (OAT - Tosurf) + (Tisurf - Tosurf) / R) / C);]]></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Entry]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Standard.Transition" uid="19933fb7-5c3f-4bc4-b03c-f00a87582f08"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="PostUpdate" mc="Standard.State" uid="17b7170d-e9a8-4e93-841b-27a9e02185ff"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="PreCalc" mc="Standard.State" uid="f36d2925-9b02-4d0e-846e-bee997346b86"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PreCalc]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="Standard.InternalTransition" uid="2e682027-9300-44c7-8f8a-bed8a24075b4"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"><![CDATA[R = lWall / (lambda_Wall * aWall); C = rhoWall * cWall * lWall * aWall / 2.0; Tisurf = TisurfInit; Tosurf = TosurfInit;]]></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Entry]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Standard.Transition" uid="b64ea71b-eccf-4dbe-be1b-95daa554f24e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Waiting" mc="Standard.State" uid="15e8dc36-61d3-4859-8c5f-fe0f7b75c814"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="PostUpdate" mc="Standard.State" uid="17b7170d-e9a8-4e93-841b-27a9e02185ff"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PostUpdate]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="Standard.InternalTransition" uid="1ee6be31-518d-4c0d-a9c7-7d71aa17ae3c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"><![CDATA[Tisurf = Tisurf + Tisurf_dot * 1; Tosurf = Tosurf + Tosurf_dot * 1;]]></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Entry]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Standard.Transition" uid="e4dca8ee-ca34-47d7-a352-db0b51b1c69e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Waiting" mc="Standard.State" uid="15e8dc36-61d3-4859-8c5f-fe0f7b75c814"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="wallModel State Machine diagram" mc="Standard.StateMachineDiagram" uid="7043c292-c15a-4c1b-9aee-dc559e461bed"/>
+      </COMP>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Standard.Note" uid="a3202e61-e975-40ae-9bf3-7a3a15037905"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+            <ATT name="MimeType"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Standard.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
