@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fmiModelDescription fmiVersion="2.0" generationDateAndTime="2017-06-12T12:36:43" generationTool="RT-Tester MBT for FMI2.0 (v1.0.0)" guid="{88a59c51-4f63-11e7-8c94-080027439296}" modelName="INTO-CPS-FCU_SUT" variableNamingConvention="structured" version="1">
+  <CoSimulation canBeInstantiatedOnlyOncePerProcess="true" canHandleVariableCommunicationStepSize="true" modelIdentifier="INTO-CPS-FCU_SUT"/>
+  <LogCategories>
+    <Category description="Log all events which are send from the RT-Tester test processes." name="logRtTester"/>
+    <Category description="Log all events (during initialization and simulation)." name="logEvents"/>
+    <Category description="Log messages when returning fmi2Warning status from any function." name="logStatusWarning"/>
+    <Category description="Log messages when returning fmi2Discard status from any function." name="logStatusDiscard"/>
+    <Category description="Log messages when returning fmi2Error status from any function." name="logStatusError"/>
+    <Category description="Log messages when returning fmi2Fatal status from any function." name="logStatusFatal"/>
+    <Category description="Log messages when returning fmi2Pending status from any function." name="logStatusPending"/>
+    <Category description="Log all messages." name="logAll"/>
+  </LogCategories>
+  <DefaultExperiment startTime="0.0" stopTime="100.0" stepSize="1" tolerance="0.0"/>
+  <ModelVariables>
+	  <ScalarVariable description="TE2SUT" name="IMR.RAT" valueReference="1" causality="input" variability="discrete">
+		  <Real start="0" min="-20" max="50"/>
+		  <Annotations>
+			  <Tool name="RT-Tester">
+				  <CodeGen CName="RAT" CType="double" ModelType="double"/>
+			  </Tool>
+		  </Annotations>
+	  </ScalarVariable>
+	  <ScalarVariable description="TE2SUT" name="IMR.RATSP" valueReference="2" causality="input" variability="discrete">
+		  <Real start="0" min="0" max="30"/>
+		  <Annotations>
+			  <Tool name="RT-Tester">
+				  <CodeGen CName="RATSP" CType="double" ModelType="double"/>
+			  </Tool>
+		  </Annotations>
+	  </ScalarVariable>
+	  <ScalarVariable description="SUT2TE" name="IMR.fanspeed" valueReference="3" causality="output" variability="discrete">
+		  <Real min="-100000" max="100000"/>
+		  <Annotations>
+			  <Tool name="RT-Tester">
+				  <CodeGen CName="fanspeed" CType="double" ModelType="double"/>
+			  </Tool>
+		  </Annotations>
+	  </ScalarVariable>
+	  <ScalarVariable description="SUT2TE" name="IMR.valveopen" valueReference="4" causality="output" variability="discrete">
+		  <Real min="-100000" max="100000"/>
+		  <Annotations>
+			  <Tool name="RT-Tester">
+				  <CodeGen CName="valveopen" CType="double" ModelType="double"/>
+			  </Tool>
+		  </Annotations>
+	  </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Outputs>
+      <Unknown dependencies="" index="3"/>
+      <Unknown dependencies="" index="4"/>
+    </Outputs>
+    <InitialUnknowns>
+      <Unknown index="3"/>
+      <Unknown index="4"/>
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

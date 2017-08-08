@@ -1,0 +1,41 @@
+{
+   "parameters": {}, 
+    "algorithm": {
+        "type": "fixed-step", 
+        "size": 1.0
+    }, 
+    "fmus": {
+        "{1841d970-559b-11e7-aa29-080027489296}": "file:/INTO-CPS/INTO_CPS_Pilot_Studies/case-study_fcu/Test-Data-Generation/FCU_RTT_MBT_RoomWall_v1.1/RTT_TestProcedures/TP4SUT_RoomWall/INTO-CPS-Demo.fmu",	
+		"{dd9122b1-55d9-11e7-8f55-080027489296}": "file:/INTO-CPS/INTO_CPS_Pilot_Studies/case-study_fcu/Test-Data-Generation/FCU_RTT_MBT_RoomWall_v1.1/RTT_TestProcedures/SUT_FCU_Ctrl/INTO-CPS-Demo_sut.fmu",
+        "{c2d275e0-33c1-48ef-88e0-66c4daa921d0}": "file:/INTO-CPS/INTO_CPS_Pilot_Studies/case-study_fcu/Test-Data-Generation/FCU_RTT_MBT_RoomWall_v1.1/RTT_TestProcedures/RoomWall/RoomHeating.fmu"
+
+    }, 
+    "connections": {
+        "{c2d275e0-33c1-48ef-88e0-66c4daa921d0}.fmu2.RAT": [
+            "{1841d970-559b-11e7-aa29-080027489296}.fmu0.IMR.RAT_out",
+			"{dd9122b1-55d9-11e7-8f55-080027489296}.fmu1.IMR.RAT"
+        ], 
+        "{1841d970-559b-11e7-aa29-080027489296}.fmu0.IMR.OAT": [
+            "{c2d275e0-33c1-48ef-88e0-66c4daa921d0}.fmu2.OAT"
+        ], 
+		"{1841d970-559b-11e7-aa29-080027489296}.fmu0.IMR.RATSP": [
+            "{dd9122b1-55d9-11e7-8f55-080027489296}.fmu1.IMR.RATSP"
+        ], 
+        "{dd9122b1-55d9-11e7-8f55-080027489296}.fmu1.IMR.fanspeed": [
+            "{c2d275e0-33c1-48ef-88e0-66c4daa921d0}.fmu2.fanspeed"
+        ],
+		"{dd9122b1-55d9-11e7-8f55-080027489296}.fmu1.IMR.valveopen": [
+            "{c2d275e0-33c1-48ef-88e0-66c4daa921d0}.fmu2.valveopen"
+        ]
+    }, 
+    "livestream": {}, 
+    "logVariables": {
+        "{1841d970-559b-11e7-aa29-080027489296}.fmu0": [
+            "IMR.OAT", 
+            "IMR.RATSP"
+        ], 
+        "{c2d275e0-33c1-48ef-88e0-66c4daa921d0}.fmu2": [
+            "RAT"
+        ]
+    }
+}
